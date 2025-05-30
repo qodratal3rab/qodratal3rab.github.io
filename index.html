@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>اكاديمية العراب للقدرات والتحصيلي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body dir="rtl">
+  <div class="logo-container">
+    <img src="al3rab-logo.png" alt="لوجو أكاديمية العراب" width="200">
+  </div>
+  <div class="container">
+    <h1>مرحبًا بك في دورة القدرات الكمي</h1>
+    <p>سجل الآن للحصول على الدورة!</p>
+    <form action="https://docs.google.com/forms/d/e/1FAIpQLScSARRT8ZOylhdOV285PA2NAkCaletFHMjpq0r6c_0chu8vHg/formResponse"  method="POST" enctype="multipart/form-data">
+      <label>الاسم الكامل:</label>
+      <input type="text" name="entry.123456789" required>
+      <label>البريد الإلكتروني:</label>
+      <input type="email" name="entry.987654321" required>
+      <label>رقم الجوال (اختياري):</label>
+      <input type="tel" name="entry.456789012">
+      <label>اختر الدورة:</label>
+      <select name="entry.789012345" required>
+        <option value="دورة التأسيس">دورة التأسيس</option>
+        <option value="دورة حل النماذج">دورة حل النماذج</option>
+      </select>
+      <label>إثبات الدفع (صورة أو ملف PDF):</label>
+      <input type="file" name="entry.345678901" accept="image/*,application/pdf" required>
+      <button type="submit">إرسال</button>
+    </form>
+    <div class="payment-info">
+      <h2>طرق الدفع:</h2>
+      <p><strong>التحويل البنكي:</strong><br>
+      الاسم: حسام عبد القادر<br>
+      البنك: البنك الأهلي السعودي<br>
+      الآيبان: SA3710000011100022727303</p>
+      <p><strong>STC Pay:</strong><br>
+      الرقم: 0592753067<br>
+      <img src="stc-qr.png" alt="QR Code STC Pay" width="150"></p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e9f5ff;
+  margin: 0;
+  padding: 0;
+}
+.logo-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+h1, h2 {
+  color: #007BFF;
+}
+input, select, button, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.payment-info {
+  margin-top: 30px;
+  background-color: #e9f5ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+.payment-info p strong {
+  color: #ffd700;
+}
