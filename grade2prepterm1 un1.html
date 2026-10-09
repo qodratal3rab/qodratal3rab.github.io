@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الأعداد النسبية – اختبارات ثاني متوسط</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1d2433;--mu:#6b7385;--pr:#c0392b;--ok:#1e8e4e;--no:#d93025;--bd:#e1e4ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171f;--card:#1f2430;--tx:#eef0f6;--mu:#9aa3b8;--bd:#2f3646}}
+:root[data-theme="dark"]{--bg:#14171f;--card:#1f2430;--tx:#eef0f6;--mu:#9aa3b8;--bd:#2f3646}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7;overflow-x:hidden}
+main{max-width:860px;margin:0 auto;padding:10px 12px}
+h1{font-size:1.1rem;margin:2px 0;color:var(--pr)}
+.sub{color:var(--mu);font-size:.85rem;margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}
+.chip{font:inherit;font-size:.8rem;line-height:1.35;color:var(--tx);background:var(--card);border:2px solid var(--bd);border-radius:12px;padding:6px 6px;cursor:pointer;text-align:center}
+.chip.on{background:var(--pr);border-color:var(--pr);color:#fff}
+.chip.w{grid-column:1/3}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.row .chip{min-width:46px;font-size:.95rem}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;background:var(--pr);transition:width .3s}
+.tag{display:inline-block;padding:0 10px;border-radius:20px;font-size:.8rem;color:#fff}
+.e{background:#1e8e4e}.m{background:#e08a00}.h{background:#d93025}
+.q{font-size:1.1rem;font-weight:600;margin:8px 0 12px;overflow-wrap:anywhere}
+.opt{display:block;width:100%;text-align:right;font:inherit;color:inherit;background:var(--card);border:2px solid var(--bd);border-radius:12px;padding:8px 12px;margin-bottom:7px;cursor:pointer;font-size:1.1rem;overflow-wrap:anywhere}
+.opt.ok{border-color:var(--ok);background:rgba(30,142,78,.15)}
+.opt.no{border-color:var(--no);background:rgba(217,48,37,.15)}
+.btn{background:var(--pr);color:#fff;border:0;border-radius:12px;padding:11px 16px;font:inherit;font-weight:600;cursor:pointer;width:100%;margin-top:4px}
+.btn.g{background:transparent;color:var(--tx);border:2px solid var(--bd)}
+.top{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:.85rem;gap:8px}
+.back{background:none;border:0;color:var(--pr);font:inherit;font-weight:600;cursor:pointer;padding:0}
+.big{font-size:2.4rem;text-align:center;font-weight:800;color:var(--pr)}
+.c{text-align:center}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;line-height:1.25;font-size:.95em}
+.fr b{font-weight:inherit;border-bottom:2px solid currentColor;padding:0 5px}
+.fr i{font-style:normal;padding:0 5px}
+.mx{display:inline-flex;flex-wrap:wrap;direction:rtl;align-items:center;gap:.15em .3em;vertical-align:middle}
+.it{display:inline-flex;align-items:center}
+.sg{display:inline-flex;align-items:center;gap:.1em}
+.pw{display:inline-block;direction:ltr;unicode-bidi:isolate}
+.pw sup{font-size:.65em;line-height:0;vertical-align:super;margin-right:1px}
+.rt{display:inline-block;line-height:1.1;direction:rtl}
+.rs{display:inline-block;transform:scaleX(-1);font-size:1.1em;vertical-align:bottom}
+.rn{display:inline-block;padding:0 3px;border-top:2px solid currentColor}
+main.qz{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.qz .card{flex:1;min-height:0;display:flex;flex-direction:column;margin-bottom:6px}
+.qb{flex:1;min-height:0;overflow:auto}.qz .q{margin:4px 0 10px}.qz .bar{margin:4px 0 6px}
+.opts{display:grid;gap:7px}.opts .opt{margin:0}@media(min-width:620px){.opts{grid-template-columns:1fr 1fr}}
+@media(max-height:700px){.q{font-size:1rem}.opt{padding:5px 10px;font-size:1rem}}
+.btn:disabled{opacity:.4;cursor:default}
+.brand{display:flex;align-items:center;gap:10px;padding:6px 2px;border-bottom:2px solid var(--pr);margin-bottom:8px}
+.brand img,.lgb{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none}
+.lgb{display:grid;place-items:center;background:var(--pr);color:#fff;font-weight:800;font-size:1.3rem}
+.brand b{font-size:1rem}.brand small{display:block;color:var(--mu)}.brand a{color:var(--pr);text-decoration:none;direction:ltr;unicode-bidi:isolate}
+.brand.sm{padding:2px;margin-bottom:4px}.brand.sm img,.brand.sm .lgb{width:28px;height:28px;font-size:.95rem}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+const SH=["الأعداد النسبية","المقارنة والترتيب","الضرب","القسمة","جمع وطرح (متشابهة)","جمع وطرح (مختلفة)","البحث عن نمط","القوى والأسس","الصيغة العلمية"];
+const N=["١-١","١-٢","١-٣","١-٤","١-٥","١-٦","١-٧","١-٨","١-٩"];
+const LV=["e","e","m","m","h","h","e","m","h","m","h"];
+const GL=["e","e","e","e","m","m","m","m","h","h","h"];
+const PER=LV.length+GL.length;
+const LN={e:"سهل",m:"متوسط",h:"صعب"},RK={e:0,m:1,h:2};
+const L=[
+[["أي الأعداد التالية عدد نسبي؟",["√2","3/4","π","√5"],1],
+["العدد 0.75 يكتب على صورة كسر:",["3/4","3/5","7/5","1/75"],0],
+["العدد 1.2 على صورة كسر في أبسط صورة:",["6/5","12/5","1/5","12/100"],0],
+["العدد -7 يكتب على صورة عدد نسبي:",["-7/1","7/0","0/-7","-1/7"],0],
+["الكسر العشري الدوري 0.333… يساوي:",["1/3","3/10","33/100","1/30"],0],
+["أي مما يلي لا يمثل عددًا نسبيًا؟",["5/0","0/5","-5/1","0"],0],
+["العدد 5 عدد نسبي لأنه يكتب بالصورة:",["5/1","5/0","0/5","1/5"],0],
+["العدد 0.2 على صورة كسر في أبسط صورة:",["1/5","1/2","2/5","1/20"],0],
+["الكسر العشري الدوري 0.666… يساوي:",["2/3","6/10","3/2","6/100"],0]],
+[["أي الأعداد التالية هو الأكبر؟",["-1/2","1/2","-3/4","-1"],1],
+["أي الأعداد التالية هو الأصغر؟",["-2","-1","0","1"],0],
+["أي الأعداد التالية هو الأكبر؟",["2/3","3/4","1/2","5/8"],1],
+["ترتيب الأعداد 0.5 ، -0.5 ، 1/4 من الأصغر إلى الأكبر:",["-0.5 ، 1/4 ، 0.5","1/4 ، -0.5 ، 0.5","0.5 ، 1/4 ، -0.5","-0.5 ، 0.5 ، 1/4"],0],
+["أي الأعداد التالية يقع بين -1/2 و 0 ؟",["-1/4","1/4","-3/4","1/2"],0],
+["أي الأعداد التالية هو الأكبر؟",["-2/3","-3/4","-5/6","-7/12"],3],
+["أي الأعداد التالية هو الأكبر؟",["-5","-3","-9","-1"],3],
+["أي الأعداد التالية هو الأكبر؟",["2/5","0.3","1/4","1/5"],0],
+["ترتيب الأعداد -1/2 ، -1/3 ، -1/4 من الأكبر إلى الأصغر:",["-1/4 ، -1/3 ، -1/2","-1/2 ، -1/3 ، -1/4","-1/3 ، -1/4 ، -1/2","-1/4 ، -1/2 ، -1/3"],0]],
+[["ناتج 1/2 × 1/3 هو:",["1/6","1/5","2/5","5/6"],0],
+["ناتج (-3) × (-4) هو:",["12","-12","7","-7"],0],
+["ناتج -2/3 × 9/10 هو:",["-3/5","3/5","-9/5","-5/3"],0],
+["ناتج 3/4 × 8 هو:",["6","32/3","3/32","24"],0],
+["ناتج -5/6 × -12/25 هو:",["2/5","-2/5","5/2","17/31"],0],
+["المعكوس الضربي للعدد -3/7 هو:",["-7/3","7/3","3/7","-3/7"],0],
+["ناتج 3 × 1/4 هو:",["3/4","12","4/3","1/12"],0],
+["ناتج -1/2 × -4/5 هو:",["2/5","-2/5","4/7","-4/7"],0],
+["ناتج 2/3 × -9/4 × 1/3 هو:",["-1/2","1/2","-3/2","-2"],0]],
+[["ناتج 1/2 ÷ 1/4 هو:",["2","1/8","1/2","4"],0],
+["ناتج 6 ÷ 1/2 هو:",["12","3","1/12","6"],0],
+["ناتج -3/4 ÷ 3/8 هو:",["-2","2","-1/2","-9/32"],0],
+["ناتج -9/10 ÷ -3/5 هو:",["3/2","2/3","-3/2","27/50"],0],
+["مساحة مستطيل 3/4 متر مربع وعرضه 1/2 متر، فيكون طوله بالمتر:",["3/2","3/8","5/4","1/2"],0],
+["ناتج -2/3 ÷ 4 هو:",["-1/6","-8/3","-6","1/6"],0],
+["ناتج 3/4 ÷ 3 هو:",["1/4","9/4","4","3/16"],0],
+["ناتج -5/8 ÷ 5/4 هو:",["-1/2","1/2","-25/32","-2"],0],
+["ناتج (2/3 ÷ 4/9) × 2 هو:",["3","3/4","4/3","1"],0]],
+[["ناتج 3/7 + 2/7 هو:",["5/7","5/14","6/7","1/7"],0],
+["ناتج 5/9 − 2/9 هو:",["1/3","7/9","3/18","10/9"],0],
+["ناتج -3/8 + 5/8 هو:",["1/4","-1/4","1/8","-1/2"],0],
+["ناتج -4/5 − 3/5 هو:",["-7/5","-1/5","7/5","1/5"],0],
+["ناتج 7/12 − 11/12 هو:",["-1/3","1/3","-1/12","-3/2"],0],
+["ناتج -5/6 + 1/6 − 3/6 هو:",["-7/6","-1/6","1/6","7/6"],0],
+["ناتج 1/5 + 3/5 هو:",["4/5","4/10","3/5","2/5"],0],
+["ناتج 9/10 − 4/10 + 1/10 هو:",["3/5","14/10","4/10","6/30"],0],
+["ناتج -7/9 − (-2/9) هو:",["-5/9","-1","5/9","-1/9"],0]],
+[["ناتج 1/2 + 1/3 هو:",["5/6","2/5","2/6","1/6"],0],
+["المضاعف المشترك الأصغر للمقامين 4 و 6 هو:",["12","24","2","10"],0],
+["ناتج 3/4 − 1/6 هو:",["7/12","2/10","5/12","1/2"],0],
+["ناتج -2/3 + 3/5 هو:",["-1/15","1/15","-19/15","1/2"],0],
+["ناتج 5/6 − (-3/4) هو:",["19/12","1/12","11/12","2/10"],0],
+["ناتج 1/2 − 1/3 + 1/4 هو:",["5/12","1/9","3/8","1/4"],0],
+["ناتج 1/4 + 1/2 هو:",["3/4","2/6","1/6","2/4"],0],
+["ناتج 2/3 − 1/2 هو:",["1/6","1/3","1/5","3/5"],0],
+["ناتج -3/4 − 5/6 هو:",["-19/12","-1/12","19/12","-8/10"],0]],
+[["العدد التالي في النمط 2 ، 4 ، 6 ، 8 هو:",["10","9","12","16"],0],
+["العدد التالي في النمط 3 ، 6 ، 12 ، 24 هو:",["48","36","30","27"],0],
+["العدد التالي في النمط 1/2 ، 1 ، 3/2 ، 2 هو:",["5/2","3","9/4","4"],0],
+["في النمط 100 ، 90 ، 80 ، … الحد الخامس هو:",["60","50","70","40"],0],
+["العدد التالي في النمط 1 ، 4 ، 9 ، 16 هو:",["25","20","36","32"],0],
+["العدد التالي في النمط 2 ، 5 ، 11 ، 23 هو:",["47","46","35","41"],0],
+["العدد التالي في النمط 5 ، 10 ، 15 ، 20 هو:",["25","30","22","24"],0],
+["العدد التالي في النمط 1 ، 3 ، 9 ، 27 هو:",["81","54","36","64"],0],
+["العدد التالي في النمط 1 ، 2 ، 4 ، 7 ، 11 هو:",["16","15","18","14"],0]],
+[["قيمة 2³ هي:",["8","6","9","5"],0],
+["قيمة 5² هي:",["25","10","7","52"],0],
+["قيمة 3⁴ هي:",["81","12","64","34"],0],
+["قيمة 2⁻³ هي:",["1/8","-8","-6","1/6"],0],
+["قيمة 5⁰ × 2² هي:",["4","20","0","10"],0],
+["ناتج 2³ × 2² بصورة قوة هو:",["2⁵","2⁶","4⁵","4⁶"],0],
+["قيمة 10² هي:",["100","20","1000","12"],0],
+["قيمة 4⁻¹ هي:",["1/4","-4","4","-1/4"],0],
+["قيمة (2²)³ هي:",["64","32","12","128"],0]],
+[["العدد 300 بالصيغة العلمية هو:",["3×10²","30×10","0.3×10³","3×10³"],0],
+["العدد 5×10³ يساوي:",["5000","500","50000","53"],0],
+["العدد 45000 بالصيغة العلمية هو:",["4.5×10⁴","45×10⁴","4.5×10³","0.45×10⁴"],0],
+["العدد 0.007 بالصيغة العلمية هو:",["7×10⁻³","7×10⁻²","7×10³","0.7×10⁻²"],0],
+["العدد 6.2×10⁻⁴ يساوي:",["0.00062","0.0062","6200","0.000062"],0],
+["أي الأعداد التالية مكتوب بالصيغة العلمية؟",["2.5×10⁶","25×10⁵","0.25×10⁷","250×10⁴"],0],
+["العدد 8×10² يساوي:",["800","80","8000","82"],0],
+["العدد 0.00035 بالصيغة العلمية هو:",["3.5×10⁻⁴","3.5×10⁻³","35×10⁻⁵","3.5×10⁴"],0],
+["ناتج (2×10³) × (3×10²) بالصيغة العلمية هو:",["6×10⁵","6×10⁶","5×10⁵","6×10⁴"],0]]
+];
+
+/* ===== عرض الرموز: المسألة تُكتب من اليمين لليسار (الحد الأول أقصى اليمين) ===== */
+const SUP="⁰¹²³⁴⁵⁶⁷⁸⁹⁻";
+const ar=s=>String(s).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+const R=a=>'<span class="mx">'+a.map(h=>'<span class="it">'+h+'</span>').join('')+'</span>';
+const tok=s=>{
+  const re=/(\d+|\([^()]*\))([⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+)|(\d+)\/(\d+)|(\d+(?:\.\d+)?)|([+−×÷=()…-])/g;
+  const o=[];let m,un=false;
+  while(m=re.exec(s)){
+    let h;
+    if(m[2]){const e=[...m[2]].map(c=>c=='⁻'?'−':ar(SUP.indexOf(c))).join('');
+      const b=m[1][0]=='('?R(['(',...tok(m[1].slice(1,-1)),')']):ar(m[1]);
+      h=`<span class="pw"><sup>${e}</sup>${b}</span>`}
+    else if(m[3])h=`<span class="fr"><b>${ar(m[3])}</b><i>${ar(m[4])}</i></span>`;
+    else if(m[5])h=ar(m[5]).replace('.','٫');
+    else{const c=m[6]=='-'?'−':m[6],pv=o.length?o[o.length-1]:null;
+      if(c=='−'&&(!pv||pv.op&&pv.h!=')')){un=true;continue}
+      if(un){o.push({h:'−',op:true});un=false}
+      o.push({h:c,op:true});continue}
+    if(un){h=`<span class="sg">−${h}</span>`;un=false}
+    o.push({h,op:false});
+  }
+  if(un)o.push({h:'−',op:true});
+  return o.map(x=>x.h);
+};
+const math=r=>{const t=r.trimEnd();return R(tok(t))+r.slice(t.length)};
+const f=s=>s.replace(/√(\d+)|[−-]?[\d(][\d\s\/.×÷+−\-()⁰¹²³⁴⁵⁶⁷⁸⁹⁻…]*/g,(m,r)=>r?`<span class="rt"><span class="rs">√</span><span class="rn">${ar(r)}</span></span>`:math(m));
+
+/* ===== مولدات الأسئلة (إجاباتها تُحسب برمجيًا) ===== */
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const rnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),pk=a=>a[rnd(0,a.length-1)];
+const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
+const nf=([n,d])=>{if(d<0){n=-n;d=-d}const k=gcd(n,d)||1;return[n/k,d/k]};
+const fs=([n,d])=>d==1?""+n:n+"/"+d;
+const P={add:(x,y)=>nf([x[0]*y[1]+y[0]*x[1],x[1]*y[1]]),sub:(x,y)=>nf([x[0]*y[1]-y[0]*x[1],x[1]*y[1]]),mul:(x,y)=>nf([x[0]*y[0],x[1]*y[1]]),div:(x,y)=>nf([x[0]*y[1],x[1]*y[0]])};
+const opd=p=>p[0]<0?"("+fs(p)+")":fs(p);
+const tm=(n,d)=>n<0?`(${n}/${d})`:`${n}/${d}`;
+const sup=n=>String(n).replace(/\d/g,d=>SUP[+d]).replace("-","⁻");
+const D=v=>String(+v.toFixed(4));
+function mk(t,c,w){const o=[c];sh(w).forEach(x=>{if(o.length<4&&!o.includes(x))o.push(x)});while(o.length<4)o.push(rnd(2,30)+"/"+rnd(31,60));return[t,o,0]}
+function frW(c,ex=[]){const[a,b]=c;return[[-a,b],[b,a],[a+1,b],[a-1,b],[a,b+1],[a,b*2],[a*2,b+1],[a+2,b],[a-2,b],[1,b+1],[a+1,b*2],...ex].filter(p=>p[1]!=0).map(p=>fs(nf(p)))}
+const rf=(mx,dm,sg)=>{let n=rnd(1,mx);if(sg&&Math.random()<.5)n=-n;return nf([n,rnd(2,dm)])};
+const IW=(t,c,d)=>mk(t,""+c,[c+1,c-1,c+2,c-2,c+d,c-d,c*2,c+3].filter(x=>x!=c).map(String));
+const OR=["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن","التاسع","العاشر"];
+const S=(m,k)=>`${m}×10${sup(k)}`;
+const dec=(m10,k)=>k>=1?""+m10+"0".repeat(k-1):"0."+"0".repeat(-k-1)+m10;
+const G=[
+lv=>{ // ١-١
+  if(Math.random()<.5){const dn=lv=="e"?10:100,x=lv=="h"?rnd(101,199):lv=="e"?pk([1,3,7,9]):pk([5,12,24,35,45,65,75,85]);
+    const c=nf([x,dn]);return mk(`العدد ${D(x/dn)} على صورة كسر في أبسط صورة:`,fs(c),frW(c,[[x,dn*10]]))}
+  const d=pk(lv=="e"?[2,4,5,10]:lv=="m"?[8,20,25]:[16,40,50,80]),n=rnd(1,d-1),v=n/d;
+  return mk(`الكسر ${n}/${d} يساوي العدد العشري:`,D(v),[v*10,v/10,1-v,v+.1,v*100,v/100].filter(y=>y>0&&y!=v).map(D))},
+lv=>{ // ١-٢
+  const big=Math.random()<.5,cmp=(a,b)=>a[0]*b[1]-b[0]*a[1];
+  const gn=()=>lv=="e"?[rnd(-9,9),1]:lv=="m"?nf([rnd(1,8),rnd(2,9)]):nf([-rnd(1,9),rnd(2,12)]);
+  const v=[];let t=0;while(v.length<4&&t++<300){const p=gn();if(v.every(x=>cmp(x,p)!=0))v.push(p)}
+  const c=v.reduce((a,b)=>(cmp(a,b)>0)==big?a:b);
+  return mk(`أي الأعداد التالية هو ${big?"الأكبر":"الأصغر"}؟`,fs(c),v.map(fs))},
+lv=>{ // ١-٣
+  const sg=lv!="e",mx=lv=="h"?6:9,A=rf(mx,mx,sg),B=rf(mx,mx,sg);
+  if(lv=="h"){const C=rf(6,6,true),c=P.mul(P.mul(A,B),C);return mk(`ناتج ${fs(A)} × ${opd(B)} × ${opd(C)} هو:`,fs(c),frW(c,[P.add(P.add(A,B),C)]))}
+  const c=P.mul(A,B);return mk(`ناتج ${fs(A)} × ${opd(B)} هو:`,fs(c),frW(c,[P.add(A,B),P.div(A,B)]))},
+lv=>{ // ١-٤
+  const sg=lv!="e",A=rf(9,9,sg),B=rf(9,9,sg);
+  if(lv=="h"){const C=rf(6,6,true),c=P.mul(P.div(A,B),C);return mk(`ناتج (${fs(A)} ÷ ${opd(B)}) × ${opd(C)} هو:`,fs(c),frW(c,[P.mul(A,B)]))}
+  const c=P.div(A,B);return mk(`ناتج ${fs(A)} ÷ ${opd(B)} هو:`,fs(c),frW(c,[P.mul(A,B)]))},
+lv=>{ // ١-٥
+  const d=rnd(5,13),k=lv=="h"?3:2,ns=[];
+  for(let i=0;i<k;i++){let n=rnd(1,d-1);if(lv!="e"&&Math.random()<.5)n=-n;ns.push(n)}
+  let tot=ns[0],t=`${ns[0]}/${d}`;
+  for(let i=1;i<k;i++){const pl=Math.random()<.5||(lv=="e"&&tot-ns[i]<0);tot+=pl?ns[i]:-ns[i];t+=` ${pl?"+":"−"} ${tm(ns[i],d)}`}
+  const c=nf([tot,d]);return mk(`ناتج ${t} هو:`,fs(c),frW(c,[[tot,d*2]]))},
+lv=>{ // ١-٦
+  const k=lv=="h"?3:2,ds=sh([2,3,4,5,6,8,9,10,12]).slice(0,k);let tot=[0,1],t="",sn=0,sd=0;
+  for(let i=0;i<k;i++){const d=ds[i];let n=rnd(1,d-1);if(lv!="e"&&Math.random()<.4)n=-n;
+    const tr=nf([n,d]),pl=i==0||(Math.random()<.5&&(lv!="e"||P.sub(tot,tr)[0]>=0));
+    tot=pl?P.add(tot,tr):P.sub(tot,tr);sn+=Math.abs(n);sd+=d;
+    t+=i==0?`${n}/${d}`:` ${pl?"+":"−"} ${tm(n,d)}`}
+  return mk(`ناتج ${t} هو:`,fs(tot),frW(tot,[[sn,sd]]))},
+lv=>{ // ١-٧
+  let a,d,l;
+  if(lv=="e"){a=rnd(1,20);d=rnd(2,9);l=[0,1,2,3].map(i=>a+i*d);return IW(`العدد التالي في النمط ${l.join(" ، ")} هو:`,a+4*d,d)}
+  if(lv=="m"){
+    if(Math.random()<.5){a=rnd(1,4);const r=pk([2,3]);l=[0,1,2,3].map(i=>a*r**i);return IW(`العدد التالي في النمط ${l.join(" ، ")} هو:`,a*r**4,l[3])}
+    a=rnd(40,100);d=rnd(3,9);const n=rnd(6,9);l=[0,1,2,3].map(i=>a-i*d);
+    return IW(`في النمط ${l.join(" ، ")} ، … ما قيمة الحد ${OR[n-1]}؟`,a-(n-1)*d,d)}
+  if(Math.random()<.5){a=rnd(1,5);let inc=rnd(1,3);const k=rnd(1,3);l=[a];for(let i=1;i<5;i++){l.push(l[i-1]+inc);inc+=k}
+    return IW(`العدد التالي في النمط ${l.join(" ، ")} هو:`,l[4]+inc,inc)}
+  a=rnd(1,3);l=[a];for(let i=1;i<4;i++)l.push(2*l[i-1]+1);
+  return IW(`العدد التالي في النمط ${l.join(" ، ")} هو:`,2*l[3]+1,l[3])},
+lv=>{ // ١-٨
+  if(lv=="e"){const a=rnd(2,5),n=rnd(2,4),c=a**n;return mk(`قيمة ${a}${sup(n)} هي:`,""+c,[a*n,a+n,n**a,a**(n+1),a**(n-1),c+1,c-1,c*2].filter(x=>x!=c).map(String))}
+  if(lv=="m"){
+    if(Math.random()<.5){const a=rnd(2,5),n=rnd(1,3),c=[1,a**n];return mk(`قيمة ${a}${sup(-n)} هي:`,fs(c),frW(c,[[1,a*n],[a,n]]))}
+    const a=rnd(2,4),n=pk([2,3]),c=(-a)**n;return mk(`قيمة (-${a})${sup(n)} هي:`,""+c,[-c,a*n,-a*n,c+1,c-1,c*2].filter(x=>x!=c).map(String))}
+  const r=rnd(0,2);
+  if(r==0){const a=rnd(2,5),m=rnd(2,5),n=rnd(2,4);return mk(`ناتج ${a}${sup(m)} × ${a}${sup(n)} بصورة قوة هو:`,`${a}${sup(m+n)}`,[`${a}${sup(m*n)}`,`${a*a}${sup(m+n)}`,`${a}${sup(m+n+1)}`,`${a*a}${sup(m*n)}`,`${a}${sup(m+n-1)}`])}
+  if(r==1){const a=rnd(2,5),n=rnd(2,3),m=n+rnd(1,3);return mk(`ناتج ${a}${sup(m)} ÷ ${a}${sup(n)} بصورة قوة هو:`,`${a}${sup(m-n)}`,[`${a}${sup(m+n)}`,`${a}${sup(m*n)}`,`${a}${sup(m-n+1)}`,`${a*a}${sup(m-n)}`,`${a}${sup(m-n+2)}`])}
+  const a=pk([2,3]),m=2,n=pk([2,3]),c=a**(m*n);return mk(`قيمة (${a}${sup(m)})${sup(n)} هي:`,""+c,[a**(m+n),a**m*n,a**m+n,a*m*n,c*a,c+1].filter(x=>x!=c).map(String))},
+lv=>{ // ١-٩
+  if(lv=="e"){const a=rnd(2,9),k=rnd(2,5);return mk(`العدد ${a}×10${sup(k)} يساوي:`,a+"0".repeat(k),[a+"0".repeat(k-1),a+"0".repeat(k+1),""+a+k,a+"0".repeat(k+2)])}
+  let m10=rnd(11,99);while(m10%10==0)m10=rnd(11,99);
+  if(lv=="m"){const k=rnd(3,7);return mk(`العدد ${dec(m10,k)} بالصيغة العلمية هو:`,S(m10/10,k),[S(m10,k-1),S(m10/10,k-1),S(m10/100,k+1),S(m10/10,k+1),S(m10/10,-k)])}
+  if(Math.random()<.5){const k=rnd(-6,-2);return mk(`العدد ${dec(m10,k)} بالصيغة العلمية هو:`,S(m10/10,k),[S(m10/10,-k),S(m10/10,k+1),S(m10/10,k-1),S(m10,k-1),S(m10/100,k+1)])}
+  const a=pk([2,3,4]),b=rnd(2,Math.floor(9/a)),p=rnd(2,6),q=rnd(2,6);
+  return mk(`ناتج (${a}×10${sup(p)}) × (${b}×10${sup(q)}) بالصيغة العلمية هو:`,S(a*b,p+q),[S(a*b,p*q),S(a*b,p+q+1),S(a*b,p+q-1),S(a+b,p+q)])}
+];
+
+L[0].push(["العدد -0.5 على صورة كسر في أبسط صورة:",["-1/2","-1/5","-5/10","1/2"],0],["الكسر العشري الدوري 0.1818… يساوي:",["2/11","1/5","9/50","18/100"],0]);
+L[1].push(["ترتيب الأعداد 1/2 ، -2/3 ، -1/4 من الأكبر إلى الأصغر:",["1/2 ، -1/4 ، -2/3","1/2 ، -2/3 ، -1/4","-1/4 ، 1/2 ، -2/3","-2/3 ، -1/4 ، 1/2"],0],["أي الأعداد التالية يقع بين -1/2 و -1/3 ؟",["-5/12","-1/4","-7/12","-1/6"],0]);
+L[2].push(["ناتج 2/5 × 15/4 هو:",["3/2","2/3","6/5","9/4"],0],["ناتج -3/4 × 8/9 × (-3/2) هو:",["1","-1","2/3","-2/3"],0]);
+L[3].push(["ناتج 5/6 ÷ 10/9 هو:",["3/4","4/3","25/27","1/4"],0],["كم قطعة طولها 3/8 متر يمكن قصها من حبل طوله 3 أمتار؟",["8","9/8","1/8","24"],0]);
+L[4].push(["ناتج -2/9 + 7/9 − 1/9 هو:",["4/9","-4/9","10/9","-10/9"],0],["ناتج -11/15 − (-4/15) + 2/15 هو:",["-1/3","-13/15","1/3","-17/15"],0]);
+L[5].push(["ناتج 3/4 − 1/6 هو:",["7/12","11/12","1/2","2/3"],0],["ناتج -5/6 + 3/4 − 1/3 هو:",["-5/12","5/12","-1/12","-13/12"],0]);
+L[6].push(["العدد التالي في النمط 5 ، 10 ، 20 ، 40 هو:",["80","50","60","45"],0],["ما قاعدة النمط 3 ، 7 ، 11 ، 15 ، … ؟",["أضف 4 إلى الحد السابق","أضف 3 إلى الحد السابق","اضرب الحد السابق في 4","اضرب الحد السابق في 2"],0]);
+L[7].push(["قيمة (-2)⁴ هي:",["16","-16","8","-8"],0],["قيمة 3⁻² × 3⁴ هي:",["9","81","27","1/9"],0]);
+L[8].push(["العدد 4500 بالصيغة العلمية هو:",["4.5×10³","45×10²","0.45×10⁴","4.5×10²"],0],["ناتج (6×10⁵) ÷ (2×10²) بالصيغة العلمية هو:",["3×10³","3×10⁷","12×10³","3×10⁻³"],0]);
+const BR={name:"مستر / حسام عبدالقادر",role:"مدرب قدرات كمي ورياضيات",phone:"0508277479",logo:"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%230f2a6b%22/%3E%3Cstop offset=%221%22 stop-color=%22%232058d6%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2257%22 fill=%22url%28%23g%29%22 stroke=%22%23f2b632%22 stroke-width=%224%22/%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2249%22 fill=%22none%22 stroke=%22%23fff%22 stroke-opacity=%22.25%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M24 62L34 56L45 78L63 34H98%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ctext x=%2280%22 y=%2262%22 font-family=%22Georgia,serif%22 font-size=%2226%22 font-style=%22italic%22 font-weight=%22700%22 fill=%22%23f2b632%22 text-anchor=%22middle%22%3E%CF%80%3C/text%3E%3Crect x=%2242%22 y=%2288%22 width=%229%22 height=%229%22 rx=%222%22 fill=%22%23f2b632%22/%3E%3Crect x=%2256%22 y=%2282%22 width=%229%22 height=%2215%22 rx=%222%22 fill=%22%23f2b632%22/%3E%3Crect x=%2270%22 y=%2274%22 width=%229%22 height=%2223%22 rx=%222%22 fill=%22%23f2b632%22/%3E%3C/svg%3E"};
+function brand(c){const lg=`<img src="${BR.logo}" alt="">`,n=BR.phone.replace(/\D/g,''),ph=`<a href="tel:${n}">${BR.phone}</a> · <a href="https://wa.me/966${n.replace(/^0/,'')}" target="_blank" rel="noopener">واتساب</a>`;return `<div class="brand${c?' sm':''}">${lg}<div><b>${BR.name}</b>${c?'':`<small>${BR.role}<br>${ph}</small>`}</div></div>`}
+/* ===== الواجهة ===== */
+const app=document.getElementById("app");
+const sel=new Set([0,1,2,3,4,5,6,7,8]);
+let cnt=10,Q=[],qi=0,sc=0,locked=false,OP=[];
+
+function all(){sel.clear();for(let i=0;i<9;i++)sel.add(i);setup()}
+function tg(i){if(sel.has(i)){if(sel.size>1)sel.delete(i)}else sel.add(i);setup()}
+function setup(){
+  const pool=sel.size*PER;
+  if(cnt>pool)cnt=pool;
+  const opts=[5,10,15,20,30,40,50,100].filter(x=>x<pool);opts.push(pool);
+  app.className="";app.innerHTML=`${brand()}<h1>الفصل ١: الجبر – الأعداد النسبية</h1>
+  <div class="sub">ثاني متوسط · اختيار من متعدد · ${ar(PER)} سؤالًا لكل درس من السهل إلى الصعب</div>
+  <div class="card"><b>١. اختر درسًا أو أكثر</b>
+  <div class="grid"><button class="chip w ${sel.size==9?'on':''}" onclick="all()">كل الدروس</button>
+  ${SH.map((s,i)=>`<button class="chip ${sel.has(i)?'on':''}" onclick="tg(${i})">${N[i]} ${s}</button>`).join('')}</div>
+  <div class="sub">الدروس المختارة: ${ar(sel.size)} · الأسئلة المتاحة: ${ar(pool)}</div>
+  <b>٢. عدد الأسئلة في المحاولة</b>
+  <div class="row">${opts.map(x=>`<button class="chip ${cnt==x?'on':''}" onclick="cnt=${x};setup()">${x==pool&&pool>10?'الكل ':''}${ar(x)}</button>`).join('')}</div>
+  <button class="btn" onclick="start()">ابدأ الاختبار</button></div>`;
+}
+function start(){
+  const p=[];
+  sel.forEach(i=>{
+    const seen=new Set();
+    L[i].forEach((q,k)=>{seen.add(q[0]);p.push({i,q,lv:LV[k]})});
+    GL.forEach(lv=>{let q;for(let t=0;t<8;t++){q=G[i](lv);if(!seen.has(q[0]))break}seen.add(q[0]);p.push({i,q,lv})});
+  });
+  Q=sh(p).slice(0,cnt).sort((a,b)=>RK[a.lv]-RK[b.lv]);
+  qi=0;sc=0;show();
+}
+function show(){
+  locked=false;
+  const o=Q[qi],q=o.q;
+  OP=sh(q[1].map((t,k)=>[t,k===q[2]]));
+  app.className="qz";
+  app.innerHTML=`${brand(1)}<div class="top"><button class="back" onclick="setup()">‹ الدروس</button><span>${N[o.i]} ${SH[o.i]}</span></div>
+  <div class="bar"><i style="width:${qi/Q.length*100}%"></i></div>
+  <div class="card"><div class="top"><span>السؤال ${ar(qi+1)} من ${ar(Q.length)}</span><span class="tag ${o.lv}">${LN[o.lv]}</span></div>
+  <div class="qb"><div class="q">${f(q[0])}</div><div class="opts">${OP.map((x,k)=>`<button class="opt" onclick="pick(${k},this)">${f(x[0])}</button>`).join('')}</div></div>
+  <button class="btn" id="nb" disabled onclick="nx()">${qi<Q.length-1?'السؤال التالي':'عرض النتيجة'}</button></div>`;
+}
+function pick(k,el){
+  if(locked)return;locked=true;
+  if(OP[k][1]){sc++;el.classList.add("ok")}else{el.classList.add("no");document.querySelectorAll(".opt")[OP.findIndex(x=>x[1])].classList.add("ok")}
+  document.getElementById("nb").disabled=false;
+}
+function nx(){qi++;qi<Q.length?show():end()}
+function end(){
+  const r=sc/Q.length;
+  const msg=r==1?"ممتاز! 🌟":r>=.7?"أحسنت 👏":"حاول مرة أخرى، ستتحسن 💪";
+  app.className="";app.innerHTML=`${brand()}<div class="card c"><div>نتيجتك</div><div class="big">${ar(sc)} / ${ar(Q.length)}</div><div>${ar(Math.round(r*100))}٪</div><p>${msg}</p>
+  <button class="btn" onclick="start()">محاولة جديدة بنفس الاختيار</button>
+  <button class="btn g" onclick="setup()">تغيير الدروس أو عدد الأسئلة</button></div>`;
+}
+setup();
+</script>
+</body>
+</html>
