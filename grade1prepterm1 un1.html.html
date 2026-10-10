@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>اختبارات الفصل ١ و٢ – أول متوسط</title>
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1d2433;--mu:#6b7385;--pr:#c0392b;--ok:#1e8e4e;--no:#d93025;--bd:#e1e4ec;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171f;--card:#1f2430;--tx:#eef0f6;--mu:#9aa3b8;--bd:#2f3646}}
+:root[data-theme="dark"]{--bg:#14171f;--card:#1f2430;--tx:#eef0f6;--mu:#9aa3b8;--bd:#2f3646}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,"Segoe UI",Tahoma,Arial,sans-serif;line-height:1.7;overflow-x:hidden}
+main{max-width:860px;margin:0 auto;padding:10px 12px}
+h1{font-size:1.1rem;margin:2px 0;color:var(--pr)}
+.sub{color:var(--mu);font-size:.85rem;margin-bottom:8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:12px;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin:8px 0}
+.chip{font:inherit;font-size:.8rem;line-height:1.35;color:var(--tx);background:var(--card);border:2px solid var(--bd);border-radius:12px;padding:6px 6px;cursor:pointer;text-align:center}
+.chip.on{background:var(--pr);border-color:var(--pr);color:#fff}
+.chip.w{grid-column:1/3}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.row .chip{min-width:46px;font-size:.95rem}
+.bar{height:8px;background:var(--bd);border-radius:6px;overflow:hidden;margin:6px 0 10px}
+.bar i{display:block;height:100%;background:var(--pr);transition:width .3s}
+.tag{display:inline-block;padding:0 10px;border-radius:20px;font-size:.8rem;color:#fff}
+.e{background:#1e8e4e}.m{background:#e08a00}.h{background:#d93025}
+.q{font-size:1.1rem;font-weight:600;margin:8px 0 12px;overflow-wrap:anywhere}
+.opt{display:block;width:100%;text-align:right;font:inherit;color:inherit;background:var(--card);border:2px solid var(--bd);border-radius:12px;padding:8px 12px;margin-bottom:7px;cursor:pointer;font-size:1.1rem;overflow-wrap:anywhere}
+.opt.ok{border-color:var(--ok);background:rgba(30,142,78,.15)}
+.opt.no{border-color:var(--no);background:rgba(217,48,37,.15)}
+.btn{background:var(--pr);color:#fff;border:0;border-radius:12px;padding:11px 16px;font:inherit;font-weight:600;cursor:pointer;width:100%;margin-top:4px}
+.btn.g{background:transparent;color:var(--tx);border:2px solid var(--bd)}
+.top{display:flex;justify-content:space-between;align-items:center;color:var(--mu);font-size:.85rem;gap:8px}
+.back{background:none;border:0;color:var(--pr);font:inherit;font-weight:600;cursor:pointer;padding:0}
+.big{font-size:2.4rem;text-align:center;font-weight:800;color:var(--pr)}
+.c{text-align:center}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px;line-height:1.25;font-size:.95em}
+.fr b{font-weight:inherit;border-bottom:2px solid currentColor;padding:0 5px}
+.fr i{font-style:normal;padding:0 5px}
+.mx{display:inline-flex;flex-wrap:wrap;direction:rtl;align-items:center;gap:.15em .3em;vertical-align:middle}
+.it{display:inline-flex;align-items:center}
+.sg{display:inline-flex;align-items:center;gap:.1em}
+.pw{display:inline-block;direction:ltr;unicode-bidi:isolate}
+.pw sup{font-size:.65em;line-height:0;vertical-align:super;margin-right:1px;direction:rtl;unicode-bidi:isolate}
+.rt{display:inline-block;line-height:1.1;direction:rtl}
+.rs{display:inline-block;transform:scaleX(-1);font-size:1.1em;vertical-align:bottom}
+.rn{display:inline-block;padding:0 3px;border-top:2px solid currentColor}
+main.qz{height:100vh;height:100dvh;display:flex;flex-direction:column;overflow:hidden}
+.qz .card{flex:1;min-height:0;display:flex;flex-direction:column;margin-bottom:6px}
+.qb{flex:1;min-height:0;overflow:auto}.qz .q{margin:4px 0 10px}.qz .bar{margin:4px 0 6px}
+.opts{display:grid;gap:7px}.opts .opt{margin:0}@media(min-width:620px){.opts{grid-template-columns:1fr 1fr}}
+@media(max-height:700px){.q{font-size:1rem}.opt{padding:5px 10px;font-size:1rem}}
+.btn:disabled{opacity:.4;cursor:default}
+.brand{display:flex;align-items:center;gap:10px;padding:6px 2px;border-bottom:2px solid var(--pr);margin-bottom:8px}
+.brand img,.lgb{width:56px;height:56px;border-radius:50%;object-fit:cover;flex:none}
+.lgb{display:grid;place-items:center;background:var(--pr);color:#fff;font-weight:800;font-size:1.3rem}
+.brand b{font-size:1rem}.brand small{display:block;color:var(--mu)}.brand a{color:var(--pr);text-decoration:none;direction:ltr;unicode-bidi:isolate}
+.brand.sm{padding:2px;margin-bottom:4px}.brand.sm img,.brand.sm .lgb{width:28px;height:28px;font-size:.95rem}
+</style>
+</head>
+<body>
+<main id="app"></main>
+<script>
+const SH=["الخطوات الأربع لحل المسألة","القوى والأسس","ترتيب العمليات","التخمين والتحقق","المتغيرات والعبارات الجبرية","المعادلات","الخصائص","المعادلات والدوال","الأعداد الصحيحة والقيمة المطلقة","مقارنة الأعداد الصحيحة","المستوى الإحداثي","جمع الأعداد الصحيحة","طرح الأعداد الصحيحة","ضرب الأعداد الصحيحة","البحث عن نمط","قسمة الأعداد الصحيحة"];
+const N=["١-١","١-٢","١-٣","١-٤","١-٥","١-٦","١-٧","١-٨","٢-١","٢-٢","٢-٣","٢-٤","٢-٥","٢-٦","٢-٧","٢-٨"];
+const GL=["e","e","m","m","h","h"];
+const LN={e:"سهل",m:"متوسط",h:"صعب"},RK={e:0,m:1,h:2};
+const RAW=[
+[["e","أولى خطوات حل المسألة هي:",["افهم","خطط","حل","تحقق"]],["e","الخطوة التي نراجع فيها صحة الإجابة هي:",["تحقق","افهم","خطط","حل"]],["e","في خطوة «خطط» نقوم بـ:",["اختيار استراتيجية للحل","قراءة المسألة فقط","كتابة الجواب النهائي","مراجعة الحل"]],["m","في خطوة «افهم» نحدد:",["المعطيات والمطلوب","الاستراتيجية","الناتج النهائي","صحة الحل"]],["m","اشترى أحمد 3 أقلام بسعر 4 ريالات للقلم ودفترًا بـ 7 ريالات. المجموع بالريال:",["19","14","21","28"]],["h","قطعت سيارة 240 كم في 3 ساعات بسرعة ثابتة. المسافة التي تقطعها في 5 ساعات بالكيلومتر:",["400","720","800","300"]],["h","ثمن 4 كتب 60 ريالًا. ثمن 7 كتب بالريال:",["105","90","120","84"]]],
+[["e","في القوة 5³ الأساس هو:",["5","3","15","8"]],["m","كتابة 3×3×3×3 بصورة قوة هي:",["3⁴","4³","12","3×4"]],["h","أي القوى التالية أكبر قيمة؟",["2⁵","5²","3³","4²"]]],
+[["e","ناتج 8 + 2 × 5 هو:",["18","50","20","26"]],["m","ناتج (8 + 2) × 5 هو:",["50","18","90","20"]],["h","ناتج 20 − 3 × 4 + 2 هو:",["10","6","70","14"]]],
+[["e","عددان مجموعهما 12 وحاصل ضربهما 35. العددان هما:",["5 و 7","4 و 8","3 و 9","6 و 6"]],["m","عددان صحيحان متتاليان مجموعهما 25. العددان هما:",["12 و 13","11 و 14","10 و 15","13 و 14"]],["h","ثلاثة أعداد صحيحة متتالية مجموعها 51. أكبرها:",["18","17","16","19"]]],
+[["e","العبارة الجبرية لـ «مجموع عدد و 5» هي:",["س + 5","5س","س − 5","س ÷ 5"]],["m","العبارة الجبرية لـ «ثلاثة أمثال عدد ناقص 2» هي:",["3س − 2","2 − 3س","3 + س − 2","س − 6"]],["h","ثمن القلم س ريالًا وثمن الدفتر يزيد عليه 3 ريالات. ثمن قلمين ودفتر:",["3س + 3","2س + 3","3س + 6","2س + 6"]]],
+[["e","حل المعادلة س + 7 = 12 هو:",["5","19","-5","84"]],["m","حل المعادلة 4س = 28 هو:",["7","24","32","112"]],["h","حل المعادلة 2س − 3 = 11 هو:",["7","4","14","8"]]],
+[["e","الخاصية المستخدمة في 3 + 5 = 5 + 3 هي:",["الإبدالية","التجميعية","التوزيع","المحايد الجمعي"]],["e","الخاصية المستخدمة في 7 × 1 = 7 هي:",["المحايد الضربي","المحايد الجمعي","الإبدالية","التجميعية"]],["e","العنصر المحايد الجمعي هو:",["0","1","-1","10"]],["m","الخاصية المستخدمة في (2 + 3) + 4 = 2 + (3 + 4) هي:",["التجميعية","الإبدالية","التوزيع","المحايد الجمعي"]],["m","الخاصية المستخدمة في 5 × 0 = 0 هي:",["خاصية الضرب في الصفر","المحايد الضربي","الإبدالية","التوزيع"]],["m","باستعمال خاصية التوزيع، 3 × (4 + 5) تساوي:",["3 × 4 + 3 × 5","3 × 4 + 5","3 + 4 × 5","(3 + 4) × (3 + 5)"]],["h","ناتج 6 × 98 باستعمال خاصية التوزيع (6 × 100 − 6 × 2) يساوي:",["588","600","612","576"]]],
+[["e","في الدالة ص = س + 5 ، إذا كانت س = 3 فإن ص تساوي:",["8","15","2","35"]],["m","المتغير المستقل في الدالة ص = 3س هو:",["س","ص","3","لا يوجد"]],["h","إذا كانت قيم س هي 1 ، 2 ، 3 وقيم ص المقابلة لها 3 ، 6 ، 9 فإن قاعدة الدالة هي:",["ص = 3س","ص = س + 2","ص = 2س + 1","ص = س + 3"]]],
+[["e","العدد الصحيح المعاكس للعدد 5 هو:",["-5","5","0","1/5"]],["e","أي الأعداد التالية ليس عددًا صحيحًا؟",["1/2","-3","0","8"]],["m","العدد الذي قيمته المطلقة 6 هو:",["6 و -6","6 فقط","-6 فقط","0"]],["h","عددان صحيحان مجموعهما 0 وقيمتهما المطلقة 9. العددان هما:",["9 و -9","9 و 9","0 و 9","-9 و -9"]]],
+[["e","أي الأعداد التالية أصغر؟",["-8","-3","0","5"]],["m","ترتيب الأعداد 3 ، -5 ، 0 ، -1 من الأصغر إلى الأكبر:",["-5 ، -1 ، 0 ، 3","-1 ، -5 ، 0 ، 3","3 ، 0 ، -1 ، -5","0 ، -1 ، -5 ، 3"]],["h","أي الأعداد التالية يقع بين -7 و -4 ؟",["-5","-8","-3","0"]]],
+[["e","المحور الأفقي في المستوى الإحداثي يسمى:",["المحور السيني","المحور الصادي","نقطة الأصل","الربع"]],["e","المحور الرأسي في المستوى الإحداثي يسمى:",["المحور الصادي","المحور السيني","نقطة الأصل","القطر"]],["e","نقطة تقاطع المحورين تسمى:",["نقطة الأصل","الربع الأول","المحور السيني","المحور الصادي"]],["m","عدد أرباع المستوى الإحداثي:",["4","2","3","8"]],["h","النقطة التي إحداثيها السيني 5 وإحداثيها الصادي 0 تقع على:",["المحور السيني","المحور الصادي","الربع الأول","نقطة الأصل"]],["h","في أي ربع تكون إشارتا الإحداثيين سالبتين؟",["الثالث","الثاني","الأول","الرابع"]]],
+[["e","ناتج -5 + (-3) هو:",["-8","-2","8","2"]],["m","ناتج -9 + 4 هو:",["-5","5","-13","13"]],["h","درجة الحرارة -4 صباحًا ثم ارتفعت 9 درجات. درجة الحرارة الآن:",["5","-5","13","-13"]]],
+[["e","ناتج 3 − 7 هو:",["-4","4","10","-10"]],["m","ناتج 5 − (-3) هو:",["8","2","-8","-2"]],["h","ناتج -7 − (-12) − 5 هو:",["0","-10","10","-24"]]],
+[["e","ناتج 4 × (-5) هو:",["-20","20","-9","9"]],["m","ناتج (-3) × (-6) هو:",["18","-18","-9","9"]],["h","ناتج (-2) × (-3) × (-4) هو:",["-24","24","-9","9"]]],
+[["e","العدد التالي في النمط 3 ، 6 ، 9 ، 12 هو:",["15","14","18","13"]],["m","العدد التالي في النمط -10 ، -7 ، -4 ، -1 هو:",["2","-2","0","1"]],["h","العدد التالي في النمط 2 ، -4 ، 8 ، -16 هو:",["32","-32","-20","24"]]],
+[["e","ناتج 24 ÷ (-6) هو:",["-4","4","-18","18"]],["m","ناتج 15 ÷ 0 هو:",["غير معرّف","0","15","1"]],["h","ناتج (-48) ÷ 6 ÷ (-2) هو:",["4","-4","16","-16"]]]
+];
+const L=RAW.map(a=>a.map(([lv,t,o])=>[t,o,0,lv]));
+/* ===== عرض الرموز: المسألة تُكتب من اليمين لليسار (الحد الأول أقصى اليمين) ===== */
+const SUP="⁰¹²³⁴⁵⁶⁷⁸⁹⁻";
+const ar=s=>String(s).replace(/\d/g,d=>"٠١٢٣٤٥٦٧٨٩"[d]);
+const R=a=>'<span class="mx">'+a.map(h=>'<span class="it">'+h+'</span>').join('')+'</span>';
+const tok=s=>{
+  const re=/(\d+|\([^()]*\))([⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+)|(\d+)\/(\d+)|(\d+(?:\.\d+)?)|([+−×÷=()…-])/g;
+  const o=[];let m,un=false;
+  while(m=re.exec(s)){
+    let h;
+    if(m[2]){const e=[...m[2]].map(c=>c=='⁻'?'−':ar(SUP.indexOf(c))).join('');
+      const b=m[1][0]=='('?R(['(',...tok(m[1].slice(1,-1)),')']):ar(m[1]);
+      h=`<span class="pw"><sup>${e}</sup>${b}</span>`}
+    else if(m[3])h=`<span class="fr"><b>${ar(m[3])}</b><i>${ar(m[4])}</i></span>`;
+    else if(m[5])h=ar(m[5]).replace('.','٫');
+    else{const c=m[6]=='-'?'−':m[6],pv=o.length?o[o.length-1]:null;
+      if(c=='−'&&(!pv||pv.op&&pv.h!=')')){un=true;continue}
+      if(un){o.push({h:'−',op:true});un=false}
+      o.push({h:c,op:true});continue}
+    if(un){h=`<span class="sg">−${h}</span>`;un=false}
+    o.push({h,op:false});
+  }
+  if(un)o.push({h:'−',op:true});
+  return o.map(x=>x.h);
+};
+const math=r=>{const t=r.trimEnd();return R(tok(t))+r.slice(t.length)};
+const f=s=>s.replace(/√(\d+)|[−-]?[\d(][\d\s\/.×÷+−\-()⁰¹²³⁴⁵⁶⁷⁸⁹⁻…]*/g,(m,r)=>r?`<span class="rt"><span class="rs">√</span><span class="rn">${ar(r)}</span></span>`:math(m));
+
+/* ===== مولدات الأسئلة (إجاباتها تُحسب برمجيًا) ===== */
+const sh=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.random()*(i+1)|0;[a[i],a[j]]=[a[j],a[i]]}return a};
+const rnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1)),pk=a=>a[rnd(0,a.length-1)];
+const gcd=(a,b)=>b?gcd(b,a%b):Math.abs(a);
+const nf=([n,d])=>{if(d<0){n=-n;d=-d}const k=gcd(n,d)||1;return[n/k,d/k]};
+const fs=([n,d])=>d==1?""+n:n+"/"+d;
+const P={add:(x,y)=>nf([x[0]*y[1]+y[0]*x[1],x[1]*y[1]]),sub:(x,y)=>nf([x[0]*y[1]-y[0]*x[1],x[1]*y[1]]),mul:(x,y)=>nf([x[0]*y[0],x[1]*y[1]]),div:(x,y)=>nf([x[0]*y[1],x[1]*y[0]])};
+const opd=p=>p[0]<0?"("+fs(p)+")":fs(p);
+const tm=(n,d)=>n<0?`(${n}/${d})`:`${n}/${d}`;
+const sup=n=>String(n).replace(/\d/g,d=>SUP[+d]).replace("-","⁻");
+const D=v=>String(+v.toFixed(4));
+function mk(t,c,w){const o=[c];sh(w).forEach(x=>{if(o.length<4&&!o.includes(x))o.push(x)});while(o.length<4)o.push(rnd(2,30)+"/"+rnd(31,60));return[t,o,0]}
+function frW(c,ex=[]){const[a,b]=c;return[[-a,b],[b,a],[a+1,b],[a-1,b],[a,b+1],[a,b*2],[a*2,b+1],[a+2,b],[a-2,b],[1,b+1],[a+1,b*2],...ex].filter(p=>p[1]!=0).map(p=>fs(nf(p)))}
+const rf=(mx,dm,sg)=>{let n=rnd(1,mx);if(sg&&Math.random()<.5)n=-n;return nf([n,rnd(2,dm)])};
+const IW=(t,c,d)=>mk(t,""+c,[c+1,c-1,c+2,c-2,c+d,c-d,c*2,c+3].filter(x=>x!=c).map(String));
+const OR=["الأول","الثاني","الثالث","الرابع","الخامس","السادس","السابع","الثامن","التاسع","العاشر"];
+const S=(m,k)=>`${m}×10${sup(k)}`;
+const dec=(m10,k)=>k>=1?""+m10+"0".repeat(k-1):"0."+"0".repeat(-k-1)+m10;
+
+const sg=()=>Math.random()<.5?-1:1,iv=n=>n<0?`(${n})`:`${n}`,IN=(t,c,e=[])=>mk(t,""+c,[-c,c+2,c-2,c+10,c-10,...e].filter(x=>x!=c).map(String));
+const G=[null,
+lv=>{const a=rnd(2,5),b=rnd(2,4),n=rnd(2,3);
+ if(lv=="e")return IW(`قيمة ${a}${sup(n)} هي:`,a**n,a*n);
+ if(lv=="m")return IW(`قيمة ${a}${sup(2)} + ${b}${sup(2)} هي:`,a*a+b*b,a+b);
+ return IW(`قيمة ${a}${sup(2)} + ${b}${sup(3)} هي:`,a*a+b**3,a+b)},
+lv=>{const a=rnd(2,9),b=rnd(2,9),c=rnd(2,9),d=rnd(2,6);
+ if(lv=="e")return mk(`ناتج ${a} + ${b} × ${c} هو:`,""+(a+b*c),[""+((a+b)*c),""+(a*b+c),""+(a+b+c)]);
+ if(lv=="m")return mk(`ناتج (${a} + ${b}) × ${c} − ${d} هو:`,""+((a+b)*c-d),[""+(a+b*c-d),""+((a+b)*(c-d)),""+(a+b+c-d)]);
+ return mk(`ناتج ${a} × (${b} + ${c}) − ${d}${sup(2)} هو:`,""+(a*(b+c)-d*d),[""+(a*(b+c)-d*2),""+(a*b+c-d*d),""+((a*(b+c)-d)*d)])},
+lv=>{const a=rnd(2,9),b=rnd(2,9);
+ if(lv=="e")return IW(`عددان مجموعهما ${a+b} وحاصل ضربهما ${a*b}. العدد الأكبر هو:`,Math.max(a,b),Math.min(a,b));
+ if(lv=="m"){const n=rnd(3,30);return IW(`ثلاثة أعداد صحيحة متتالية مجموعها ${3*n+3}. أصغرها:`,n,1)}
+ const w=rnd(3,12),k=rnd(2,6);return IW(`مستطيل محيطه ${2*(2*w+k)} سم وطوله يزيد على عرضه بمقدار ${k} سم. عرضه بالسنتيمتر:`,w,k)},
+lv=>{const a=rnd(2,6),b=rnd(1,9),x=rnd(2,9),y=rnd(2,6);
+ if(lv=="e")return IW(`قيمة العبارة ${a}س + ${b} عندما س تساوي ${x} هي:`,a*x+b,a);
+ if(lv=="m"){const bb=rnd(1,a*x-1);return IW(`قيمة العبارة ${a}س − ${bb} عندما س تساوي ${x} هي:`,a*x-bb,a)}
+ return IW(`قيمة العبارة ${a}س + ${b}ص عندما س تساوي ${x} و ص تساوي ${y} هي:`,a*x+b*y,b)},
+lv=>{const x=rnd(2,12),a=rnd(2,6),b=rnd(1,15);
+ if(lv=="e")return IW(`حل المعادلة س + ${b} = ${x+b} هو:`,x,b);
+ if(lv=="m")return IW(`حل المعادلة ${a}س = ${a*x} هو:`,x,a);
+ return IW(`حل المعادلة ${a}س + ${b} = ${a*x+b} هو:`,x,a)},
+null,
+lv=>{const a=rnd(2,6),b=rnd(1,9),x=rnd(1,8);
+ if(lv=="e")return IW(`في الدالة ص = ${a}س ، إذا كانت س = ${x} فإن ص تساوي:`,a*x,a);
+ if(lv=="m")return IW(`في الدالة ص = ${a}س + ${b} ، إذا كانت س = ${x} فإن ص تساوي:`,a*x+b,a);
+ return IW(`في الدالة ص = ${a}س − ${b} ، إذا كانت س = ${x+b} فإن ص تساوي:`,a*(x+b)-b,a)},
+lv=>{const a=sg()*rnd(2,15),b=sg()*rnd(2,9);
+ if(lv=="e")return IN(`القيمة المطلقة للعدد ${a} هي:`,Math.abs(a));
+ if(lv=="m")return IN(`مجموع القيمتين المطلقتين للعددين ${a} و ${b} هو:`,Math.abs(a)+Math.abs(b));
+ return IN(`ناتج القيمة المطلقة للعدد ${a} ناقص القيمة المطلقة للعدد ${b} هو:`,Math.abs(a)-Math.abs(b))},
+lv=>{const n=lv=="h"?3:4,v=[];while(v.length<n){const x=rnd(-12,12);if(!v.includes(x))v.push(x)}
+ const j=a=>a.join(" ، ");
+ if(lv=="h"){const s=v.slice().sort((x,y)=>x-y);return mk(`ترتيب الأعداد ${j(v)} من الأصغر إلى الأكبر:`,j(s),[j(s.slice().reverse()),j([s[1],s[0],s[2]]),j([s[0],s[2],s[1]]),j([s[2],s[0],s[1]])])}
+ const big=lv=="e",c=big?Math.max(...v):Math.min(...v);return mk(`أي الأعداد التالية هو ${big?"الأكبر":"الأصغر"}؟`,""+c,v.filter(x=>x!=c).map(String))},
+lv=>{const x=sg()*rnd(1,9),y=sg()*rnd(1,9),Qn=["الأول","الثاني","الثالث","الرابع"],c=x>0&&y>0?0:x<0&&y>0?1:x<0?2:3;
+ return mk(`النقطة التي إحداثيها السيني ${x} وإحداثيها الصادي ${y} تقع في الربع:`,Qn[c],Qn.filter((_,i)=>i!=c))},
+lv=>{let a,b;if(lv=="e"){const s=sg();a=s*rnd(2,12);b=s*rnd(2,12)}else{a=sg()*rnd(2,20);b=-Math.sign(a)*rnd(2,20)}
+ if(lv=="h"){const d=sg()*rnd(2,15);return IN(`ناتج ${a} + ${iv(b)} + ${iv(d)} هو:`,a+b+d)}
+ return IN(`ناتج ${a} + ${iv(b)} هو:`,a+b)},
+lv=>{const a=sg()*rnd(2,20),b=sg()*rnd(2,20),d=sg()*rnd(2,9);
+ if(lv=="e"){const x=rnd(1,15),y=rnd(1,15);return IN(`ناتج ${x} − ${y} هو:`,x-y)}
+ if(lv=="m")return IN(`ناتج ${a} − ${iv(b)} هو:`,a-b);
+ return IN(`ناتج ${a} − ${iv(b)} − ${iv(d)} هو:`,a-b-d)},
+lv=>{const a=rnd(2,9),b=rnd(2,9),c=rnd(2,5);
+ if(lv=="e")return IN(`ناتج ${a} × ${iv(-b)} هو:`,-a*b);
+ if(lv=="m")return IN(`ناتج ${iv(-a)} × ${iv(-b)} هو:`,a*b);
+ const s=[sg(),sg(),sg()];return IN(`ناتج ${iv(s[0]*a)} × ${iv(s[1]*b)} × ${iv(s[2]*c)} هو:`,s[0]*s[1]*s[2]*a*b*c)},
+lv=>{let a,d,l,r;
+ if(lv=="e"){a=rnd(-20,5);d=rnd(2,6);l=[0,1,2,3].map(i=>a+i*d);return IN(`العدد التالي في النمط ${l.join(" ، ")} هو:`,a+4*d,[a+5*d])}
+ if(lv=="m"){a=rnd(5,30);d=rnd(3,8);l=[0,1,2,3].map(i=>a-i*d);return IN(`العدد التالي في النمط ${l.join(" ، ")} هو:`,a-4*d,[a-5*d])}
+ a=rnd(1,3);r=pk([-2,-3]);l=[0,1,2,3].map(i=>a*r**i);return IN(`العدد التالي في النمط ${l.join(" ، ")} هو:`,a*r**4,[l[3]+l[2]])},
+lv=>{const b=rnd(2,9),q=rnd(2,12);
+ if(lv=="e")return IN(`ناتج ${b*q} ÷ ${b} هو:`,q);
+ if(lv=="m"){const sb=sg()*b,sq=sg()*q;return IN(`ناتج ${iv(sb*sq)} ÷ ${iv(sb)} هو:`,sq)}
+ const c=rnd(2,4),sb=sg()*b,sc=sg()*c,sq=sg()*q;return IN(`ناتج ${iv(sq*sb*sc)} ÷ ${iv(sb)} ÷ ${iv(sc)} هو:`,sq)}
+];
+const BR={name:"مستر / حسام عبدالقادر",role:"مدرب قدرات كمي ورياضيات",phone:"0508277479",logo:"data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 120 120%22%3E%3Cdefs%3E%3ClinearGradient id=%22g%22 x1=%220%22 y1=%220%22 x2=%221%22 y2=%221%22%3E%3Cstop offset=%220%22 stop-color=%22%230f2a6b%22/%3E%3Cstop offset=%221%22 stop-color=%22%232058d6%22/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2257%22 fill=%22url%28%23g%29%22 stroke=%22%23f2b632%22 stroke-width=%224%22/%3E%3Ccircle cx=%2260%22 cy=%2260%22 r=%2249%22 fill=%22none%22 stroke=%22%23fff%22 stroke-opacity=%22.25%22 stroke-width=%221.5%22/%3E%3Cpath d=%22M24 62L34 56L45 78L63 34H98%22 fill=%22none%22 stroke=%22%23fff%22 stroke-width=%226%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22/%3E%3Ctext x=%2280%22 y=%2262%22 font-family=%22Georgia,serif%22 font-size=%2226%22 font-style=%22italic%22 font-weight=%22700%22 fill=%22%23f2b632%22 text-anchor=%22middle%22%3E%CF%80%3C/text%3E%3Crect x=%2242%22 y=%2288%22 width=%229%22 height=%229%22 rx=%222%22 fill=%22%23f2b632%22/%3E%3Crect x=%2256%22 y=%2282%22 width=%229%22 height=%2215%22 rx=%222%22 fill=%22%23f2b632%22/%3E%3Crect x=%2270%22 y=%2274%22 width=%229%22 height=%2223%22 rx=%222%22 fill=%22%23f2b632%22/%3E%3C/svg%3E"};
+function brand(c){const lg=`<img src="${BR.logo}" alt="">`,n=BR.phone.replace(/\D/g,''),ph=`<a href="tel:${n}">${BR.phone}</a> · <a href="https://wa.me/966${n.replace(/^0/,'')}" target="_blank" rel="noopener">واتساب</a>`;return `<div class="brand${c?' sm':''}">${lg}<div><b>${BR.name}</b>${c?'':`<small>${BR.role}<br>${ph}</small>`}</div></div>`}
+/* ===== الواجهة ===== */
+const app=document.getElementById("app");
+const NL=16,sel=new Set([...Array(NL).keys()]);
+let cnt=10,Q=[],qi=0,sc=0,locked=false,OP=[];
+
+function all(){sel.clear();for(let i=0;i<NL;i++)sel.add(i);setup()}
+function ch(a){sel.clear();for(let i=a;i<a+8;i++)sel.add(i);setup()}
+function tg(i){if(sel.has(i)){if(sel.size>1)sel.delete(i)}else sel.add(i);setup()}
+function setup(){
+  const pool=[...sel].reduce((t,i)=>t+L[i].length+(G[i]?GL.length:0),0);
+  if(cnt>pool)cnt=pool;
+  const opts=[5,10,15,20,30,40,50,100].filter(x=>x<pool);opts.push(pool);
+  app.className="";app.innerHTML=`${brand()}<h1>الفصلان ١ و٢: الجبر والدوال – الأعداد الصحيحة</h1>
+  <div class="sub">أول متوسط · اختيار من متعدد · الأسئلة مرتبة من السهل إلى الصعب</div>
+  <div class="card"><b>١. اختر درسًا أو أكثر</b>
+  <div class="grid"><button class="chip w ${sel.size==NL?'on':''}" onclick="all()">كل الدروس</button><button class="chip w" onclick="ch(0)">الفصل ١ كله</button><button class="chip w" onclick="ch(8)">الفصل ٢ كله</button>
+  ${SH.map((s,i)=>`<button class="chip ${sel.has(i)?'on':''}" onclick="tg(${i})">${N[i]} ${s}</button>`).join('')}</div>
+  <div class="sub">الدروس المختارة: ${ar(sel.size)} · الأسئلة المتاحة: ${ar(pool)}</div>
+  <b>٢. عدد الأسئلة في المحاولة</b>
+  <div class="row">${opts.map(x=>`<button class="chip ${cnt==x?'on':''}" onclick="cnt=${x};setup()">${x==pool&&pool>10?'الكل ':''}${ar(x)}</button>`).join('')}</div>
+  <button class="btn" onclick="start()">ابدأ الاختبار</button></div>`;
+}
+function start(){
+  const p=[];
+  sel.forEach(i=>{const seen=new Set();L[i].forEach(q=>{seen.add(q[0]);p.push({i,q,lv:q[3]})});
+    if(G[i])GL.forEach(lv=>{let q;for(let t=0;t<8;t++){q=G[i](lv);if(!seen.has(q[0]))break}seen.add(q[0]);p.push({i,q,lv})})});
+  Q=sh(p).slice(0,cnt).sort((a,b)=>RK[a.lv]-RK[b.lv]);
+  qi=0;sc=0;show();
+}
+function show(){
+  locked=false;
+  const o=Q[qi],q=o.q;
+  OP=sh(q[1].map((t,k)=>[t,k===q[2]]));
+  app.className="qz";
+  app.innerHTML=`${brand(1)}<div class="top"><button class="back" onclick="setup()">‹ الدروس</button><span>${N[o.i]} ${SH[o.i]}</span></div>
+  <div class="bar"><i style="width:${qi/Q.length*100}%"></i></div>
+  <div class="card"><div class="top"><span>السؤال ${ar(qi+1)} من ${ar(Q.length)}</span><span class="tag ${o.lv}">${LN[o.lv]}</span></div>
+  <div class="qb"><div class="q">${f(q[0])}</div><div class="opts">${OP.map((x,k)=>`<button class="opt" onclick="pick(${k},this)">${f(x[0])}</button>`).join('')}</div></div>
+  <button class="btn" id="nb" disabled onclick="nx()">${qi<Q.length-1?'السؤال التالي':'عرض النتيجة'}</button></div>`;
+}
+function pick(k,el){
+  if(locked)return;locked=true;
+  if(OP[k][1]){sc++;el.classList.add("ok")}else{el.classList.add("no");document.querySelectorAll(".opt")[OP.findIndex(x=>x[1])].classList.add("ok")}
+  document.getElementById("nb").disabled=false;
+}
+function nx(){qi++;qi<Q.length?show():end()}
+function end(){
+  const r=sc/Q.length;
+  const msg=r==1?"ممتاز! 🌟":r>=.7?"أحسنت 👏":"حاول مرة أخرى، ستتحسن 💪";
+  app.className="";app.innerHTML=`${brand()}<div class="card c"><div>نتيجتك</div><div class="big">${ar(sc)} / ${ar(Q.length)}</div><div>${ar(Math.round(r*100))}٪</div><p>${msg}</p>
+  <button class="btn" onclick="start()">محاولة جديدة بنفس الاختيار</button>
+  <button class="btn g" onclick="setup()">تغيير الدروس أو عدد الأسئلة</button></div>`;
+}
+setup();
+</script>
+</body>
+</html>
