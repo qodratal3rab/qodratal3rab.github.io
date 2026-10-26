@@ -105,9 +105,22 @@
   function shuffle(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)), t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
   function pick(a, n) { return shuffle(a.slice()).slice(0, n); }
 
-  // لو لم تُحمَّل البنوك مع الصفحة (مثلًا بدون قاعدة بيانات) تُحمَّل هنا
-  var need = ['aksam lafzi', 'aksam kamy'].filter(function (c) { return !(window.__BWD || {})[c]; }), left = need.length;
-  if (!left) main(); else need.forEach(function (c) { var sc = document.createElement('script'); sc.src = '/api/exam/data?c=' + encodeURIComponent(c); sc.onload = sc.onerror = function () { if (!--left) main(); }; document.head.appendChild(sc); });
+  // على الاستضافة الثابتة مثل GitHub Pages لا يوجد /api؛ نقرأ بنكَي الأسئلة من ملفيهما المحليين.
+  var localBanks = { 'aksam lafzi': 'aksam%20lafzi.html', 'aksam kamy': 'aksam%20kamy.html' };
+  function loadLocalBank(slug) {
+    if ((window.__BWD || {})[slug]) return Promise.resolve();
+    return fetch(localBanks[slug], { cache: 'no-store' }).then(function (r) {
+      if (!r.ok) throw new Error('bank ' + slug + ' unavailable');
+      return r.text();
+    }).then(function (html) {
+      var doc = new DOMParser().parseFromString(html, 'text/html'), node = doc.getElementById('db');
+      if (!node) throw new Error('bank data missing');
+      window.__BWD = window.__BWD || {};
+      window.__BWD[slug] = JSON.parse(node.textContent || node.innerText || '{}');
+    });
+  }
+  var need = ['aksam lafzi', 'aksam kamy'].filter(function (c) { return !(window.__BWD || {})[c]; });
+  if (!need.length) main(); else Promise.all(need.map(loadLocalBank)).then(main).catch(main);
   function main() {
     // الأسئلة من بنكَي «أقسام اللفظي» و«أقسام الكمي» نفسيهما (مع تعديلات المعلمين)
     var bank = function (slug) { return window.__bwBank ? window.__bwBank(slug) : ((window.__BWD || {})[slug] || null); };
