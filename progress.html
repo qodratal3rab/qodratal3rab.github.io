@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c2440">
+  <meta name="bw-hub" content="1">
+  <title>تقدمي | البوابة التعليمية</title>
+  <link rel="icon" href="/icons/icon-192.png">
+  <link rel="stylesheet" href="/bw-theme.css">
+  <style>
+    body.bwt-hub { color: #142338; line-height: 1.7; }
+    .pw { width: min(1080px, calc(100% - 32px)); margin: 40px auto 70px; }
+    .pw h1 { font-size: clamp(26px, 3.4vw, 36px); color: var(--bw-navy); margin: 0; }
+    .pw .sub { color: #5a6b80; margin: 4px 0 26px; }
+    .next { display: flex; gap: 18px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--bw-night); color: #fff; border-radius: 22px; padding: 24px 26px; margin-bottom: 22px; box-shadow: -8px 8px 0 var(--bw-gold); }
+    .next small { color: var(--bw-gold); font-weight: 600; font-size: 14px; }
+    .next h2 { margin: 2px 0 4px; font-size: clamp(20px, 2.6vw, 26px); }
+    .next p { margin: 0; color: #c3d3e4; max-width: 40em; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; font: 600 15px "IBM Plex Sans Arabic", Tahoma, sans-serif; text-decoration: none; border: 0; border-radius: 12px; padding: 11px 18px; cursor: pointer; white-space: nowrap; }
+    .btn-gold { background: var(--bw-gold); color: var(--bw-night); }
+    .btn-navy { background: var(--bw-navy); color: #fff; }
+    .btn-soft { background: #eaf2f9; color: var(--bw-navy); }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: #fff; border: 1px solid var(--bw-line); border-radius: 20px; margin-bottom: 22px; }
+    .kpi { padding: 18px 20px; border-inline-start: 1px solid var(--bw-line); }
+    .kpi:first-child { border-inline-start: 0; }
+    .kpi b { display: block; font-family: "Readex Pro", sans-serif; font-size: 30px; color: var(--bw-navy); line-height: 1.3; }
+    .kpi span { color: #5a6b80; font-size: 14px; }
+    .two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 22px; }
+    .card { background: #fff; border: 1px solid var(--bw-line); border-radius: 20px; padding: 22px; }
+    .card h3 { margin: 0 0 4px; font-size: 19px; color: var(--bw-navy); }
+    .card .m { color: #5a6b80; font-size: 14px; margin: 0 0 14px; }
+    .sk { display: grid; grid-template-columns: minmax(0, 1fr) 120px 44px; gap: 10px; align-items: center; padding: 7px 0; border-bottom: 1px solid #eef3f8; font-size: 14.5px; }
+    .sk:last-of-type { border-bottom: 0; }
+    .sk .nm { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .bar { height: 8px; background: #eaf1f5; border-radius: 99px; overflow: hidden; }
+    .bar i { display: block; height: 100%; border-radius: 99px; }
+    .lv-r i { background: #c2412f; } .lv-o i { background: var(--bw-gold); } .lv-g i { background: #1d8a58; }
+    .sk b { text-align: left; font-family: "Readex Pro", sans-serif; }
+    .grp { font-weight: 600; font-size: 13.5px; color: #5a6b80; margin: 14px 0 2px; }
+    .acts { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 16px; }
+    .sims { display: flex; align-items: flex-end; gap: 8px; height: 150px; padding-top: 10px; border-bottom: 1px solid var(--bw-line); }
+    .sims div { flex: 1; max-width: 46px; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; gap: 4px; height: 100%; font-size: 12px; color: #5a6b80; }
+    .sims i { display: block; width: 100%; background: var(--bw-navy); border-radius: 8px 8px 0 0; min-height: 4px; }
+    .sims div:last-child i { background: var(--bw-gold); }
+    .empty { text-align: center; padding: 30px 10px; color: #5a6b80; }
+    .streak { display: flex; justify-content: space-between; align-items: center; gap: 14px; flex-wrap: wrap; background: #fff; border: 1px solid var(--bw-line); border-radius: 20px; padding: 16px 20px; margin-bottom: 22px; }
+    .streak b { display: block; color: var(--bw-navy); font-size: 17px; }
+    .goal { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; }
+    .cd { text-align: center; background: var(--bw-navy); color: #fff; border-radius: 16px; padding: 12px 18px; min-width: 110px; }
+    .cd b { display: block; font-size: 30px; line-height: 1.1; color: var(--bw-gold); }
+    .cd span { font-size: 13px; }
+    .gbar { height: 12px; background: #e8eef6; border-radius: 99px; overflow: hidden; margin: 8px 0 4px; }
+    .gbar i { display: block; height: 100%; background: linear-gradient(90deg, #1f9d61, #3cc483); border-radius: 99px; }
+    .gin { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-top: 10px; font-size: 14px; color: #5a6b80; }
+    .gin input, .gin select { font: inherit; border: 1px solid var(--bw-line); border-radius: 10px; padding: 6px 10px; background: #fff; }
+    .plan { list-style: none; margin: 8px 0 0; padding: 0; }
+    .plan li { display: grid; grid-template-columns: 76px 1fr; gap: 10px; padding: 9px 0; border-top: 1px solid #eef3f8; font-size: 14.5px; }
+    .plan li:first-child { border-top: 0; }
+    .plan li b { color: var(--bw-navy); }
+    .plan li.today { background: #fff8e6; border-radius: 10px; padding: 9px 8px; }
+    .rv { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 8px 0 12px; }
+    .rv div { background: #f5f8fc; border-radius: 12px; padding: 10px; text-align: center; }
+    .rv b { display: block; font-size: 22px; color: var(--bw-navy); }
+    .rv span { font-size: 12.5px; color: #5a6b80; }
+    .rk { display: flex; justify-content: space-between; gap: 10px; padding: 8px 0; border-top: 1px solid #eef3f8; font-size: 14.5px; }
+    .rk:first-of-type { border-top: 0; }
+    .lnk { background: none; border: 0; color: #5a6b80; text-decoration: underline; cursor: pointer; font: inherit; font-size: 13px; padding: 0; }
+    @media (max-width: 640px) { .goal { grid-template-columns: 1fr; } .plan li { grid-template-columns: 64px 1fr; } }
+    .streak span { color: #5a6b80; font-size: 14px; }
+    .streak .wk { display: flex; gap: 6px; max-width: 100%; }
+    .streak .wk i { flex: 1 1 38px; min-width: 0; max-width: 38px; height: 38px; border-radius: 12px; background: #eef3f8; display: grid; place-items: center; font-style: normal; }
+    .streak .wk i.on { background: var(--bw-gold); }
+    .streak .wk i.t { box-shadow: 0 0 0 2px var(--bw-navy); }
+    .streak .wk em { font-style: normal; font-size: 10.5px; color: #5a6b80; }
+    .streak .wk i.on em { color: var(--bw-night); font-weight: 600; }
+    .note { color: #5a6b80; font-size: 13.5px; text-align: center; margin-top: 10px; }
+    .resume { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; background: var(--bw-gold-soft); border-radius: 16px; padding: 12px 16px; margin-bottom: 12px; color: #6b4a00; font-weight: 600; }
+    @media (max-width: 860px) { .two { grid-template-columns: 1fr; } .kpis { grid-template-columns: 1fr 1fr; } .kpi:nth-child(3) { border-inline-start: 0; } .kpi:nth-child(n+3) { border-top: 1px solid var(--bw-line); } }
+  </style>
+</head>
+<body class="bwt-hub">
+  <div id="bw-shell"><a class="bws-brand" href="/"><img src="/icons/logo.jpg" alt=""><b>البوابة التعليمية<small>منصة الاختبارات</small></b></a><span class="bws-title">تقدمي</span><span class="bws-tools"></span><a class="bws-back" href="/#tests">كل الاختبارات</a></div>
+  <main class="pw" id="app"><p class="empty">جارٍ تحليل تدريبك…</p></main>
+  <p class="note" id="pz" hidden><button class="btn btn-soft" type="button">⏸ تحتاج استراحة من المذاكرة؟ أوقف اشتراكك مؤقتًا</button></p>
+
+<script>
+(function () {
+  'use strict';
+  // كل البيانات هنا من تدريب الطالب المحفوظ على هذا الجهاز (نفس ما تستخدمه صفحات الاختبارات)
+  var app = document.getElementById('app');
+  var AR = function (n) { return String(n).replace(/\d/g, function (d) { return '٠١٢٣٤٥٦٧٨٩'[d]; }); };
+  var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); };
+  function get(k, d) { try { var v = localStorage.getItem(k); return v ? JSON.parse(v) : d; } catch (e) { return d; } }
+  var DAY = 864e5, now = Date.now();
+  var SUBJ = {
+    kamy: { title: 'القسم الكمي', page: '/aksam%20kamy.html', slug: 'aksam kamy', stats: 'bw-stats-v1', errs: 'quant-quiz-errors-v1', sel: 'bw-sel-v1', run: 'bw-run', sims: [['bw-sim-v1', 'محاكي الكمي']], resume: 'bwq-resume' },
+    lafzi: { title: 'القسم اللفظي', page: '/aksam%20lafzi.html', slug: 'aksam lafzi', stats: 'bwv-stats-v1', errs: 'verbal-quiz-errors-v1', sel: 'bwv-sel-v1', run: 'bwv-run', sims: [['bwv-sim-v1', 'محاكي اللفظي'], ['bwm-sim-v1', 'المحاكي المحوسب']], resume: 'bwm-resume' }
+  };
+  var names = {};
+  function load(sj) {
+    var S = get(SUBJ[sj].stats, { s: {}, h: [] }) || { s: {}, h: [] }, E = get(SUBJ[sj].errs, {}) || {};
+    var secs = Object.keys(S.s || {}).map(function (k) { var a = S.s[k]; return { id: +k, t: a.t, c: a.c, p: a.t ? a.c / a.t : 0 }; }).filter(function (x) { return x.id < 1000; });
+    var h = (S.h || []), errs = Object.keys(E).map(function (k) { return E[k]; }).filter(function (x) { return x && x.id < 100000; });
+    var n = 0, g = 0, wk = 0; h.forEach(function (x) { n += x.n || 0; g += x.g || 0; if (now - new Date(x.d) < 7 * DAY) wk += x.n || 0; });
+    return { secs: secs, h: h, errs: errs, n: n, g: g, wk: wk, due: errs.filter(function (x) { return now - new Date(x.date) >= [1, 3, 7][x.ok || 0] * DAY; }).length, run: get(SUBJ[sj].run, null) };
+  }
+  var K = load('kamy'), V = load('lafzi');
+  var sims = []; ['kamy', 'lafzi'].forEach(function (sj) { SUBJ[sj].sims.forEach(function (s) { (get(s[0], []) || []).forEach(function (x) { if (x && x.d != null) sims.push({ d: x.d, p: x.p, n: s[1] }); }); }); });
+  sims.sort(function (a, b) { return new Date(a.d) - new Date(b.d); });
+  var place = (get('bw-place-v1', []) || []).slice(-1)[0] || null;
+  var WHYN = { u: 'لم أفهم الفكرة', r: 'تسرّعت', c: 'خطأ حساب أو قراءة', g: 'خمّنت', t: 'ضاق الوقت' }, WHYALL = get('bw-why-v1', {}) || {};
+  function whyLine(sj, X) {
+    var W = WHYALL[SUBJ[sj].slug] || {}, c = {}, n = 0; X.errs.forEach(function (e) { var r = W[e.id]; if (WHYN[r]) { c[r] = (c[r] || 0) + 1; n++; } });
+    if (!n) return '';
+    return '<p class="m">أسباب أخطائك: ' + Object.keys(c).sort(function (a, b) { return c[b] - c[a]; }).map(function (k) { return WHYN[k] + ' (' + AR(c[k]) + ')'; }).join(' · ') + '</p>';
+  }
+  var tasis = get('tanazur.best', {}) || {}, tasisDone = Object.keys(tasis).length;
+
+  function secName(sj, id) { var n = names[sj] && names[sj][id]; return n ? n : 'القسم ' + AR(id); }
+  function practice(sj, ids) { try { localStorage.setItem(SUBJ[sj].sel, JSON.stringify(ids)); } catch (e) { } location.href = SUBJ[sj].page; }
+  window.bwPractice = practice;
+
+  // الخطوة التالية: قاعدة واحدة واضحة بدل قائمة طويلة
+  function nextStep() {
+    var dueAll = K.due + V.due;
+    if (K.run && K.run.ids && K.run.ids.length) return { t: 'أكمل اختبارك غير المكتمل', d: 'عندك اختبار بدأته في أقسام الكمي ولم تنهه.', b: 'أكمل في أقسام الكمي', go: SUBJ.kamy.page };
+    if (V.run && V.run.ids && V.run.ids.length) return { t: 'أكمل اختبارك غير المكتمل', d: 'عندك اختبار بدأته في أقسام اللفظي ولم تنهه.', b: 'أكمل في أقسام اللفظي', go: SUBJ.lafzi.page };
+    if (dueAll >= 5) { var sj = K.due >= V.due ? 'kamy' : 'lafzi'; return { t: 'راجع ' + AR(dueAll) + ' سؤالًا أخطأت فيها', d: 'مرّ عليها يوم أو أكثر، وهذا أنسب وقت لمراجعتها حتى تثبت.', b: 'راجع أخطاء ' + SUBJ[sj].title, go: SUBJ[sj].page + '#errors' }; }
+    var weak = K.secs.concat(V.secs.map(function (x) { return { id: x.id, t: x.t, c: x.c, p: x.p, sj: 'lafzi' }; })).map(function (x) { if (!x.sj) x.sj = 'kamy'; return x; }).filter(function (x) { return x.t >= 3 && x.p < .6; }).sort(function (a, b) { return a.p - b.p; });
+    if (weak.length) { var w = weak[0]; return { t: 'تدرّب على ' + secName(w.sj, w.id), d: 'دقتك فيه ' + AR(Math.round(w.p * 100)) + '٪ في آخر محاولاتك. جولة واحدة مركزة ستفرق.', b: 'ابدأ التدريب عليه', fn: function () { practice(w.sj, [w.id]); } }; }
+    var lastSim = sims[sims.length - 1];
+    if (K.n + V.n >= 40 && (!lastSim || now - new Date(lastSim.d) > 7 * DAY)) return { t: 'اختبر نفسك في المحاكي المحوسب', d: 'تدربت جيدًا هذا الأسبوع. جرّب اختبارًا كاملًا بالمؤقت لتعرف مستواك الحقيقي.', b: 'ادخل المحاكي', go: '/muhaky%20mohawsab.html' };
+    if (K.n + V.n === 0 && !place) return { t: 'ابدأ باختبار تحديد المستوى', d: '٢٠ سؤالًا من الكمي واللفظي تعرف بها مستواك ومن أين تبدأ، وتحصل على خطة مرتبة.', b: 'حدّد مستواك الآن', go: '/placement.html' };
+    if (K.n + V.n === 0) return { t: 'ابدأ أول تدريب لك', d: 'اختر قسمًا من الكمي أو اللفظي وحلّ ١١ سؤالًا. بعدها ستظهر هنا نقاط قوتك وضعفك.', b: 'اختر اختبارك', go: '/#tests' };
+    var sj2 = K.n <= V.n ? 'kamy' : 'lafzi'; return { t: 'تدرّب على قسم جديد في ' + SUBJ[sj2].title, d: 'أداؤك جيد في ما حلّلته. جرّب أقسامًا لم تحلها بعد.', b: 'افتح ' + SUBJ[sj2].title, go: SUBJ[sj2].page };
+  }
+  // أيام التدريب المتتالية (بدون ضغط: اليوم لا يُحسب ناقصًا قبل أن ينتهي)
+  function dayKey(t) { var d = new Date(t); return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate(); }
+  function streak() {
+    var days = {}; K.h.concat(V.h).forEach(function (x) { if (x.d) days[dayKey(x.d)] = 1; }); sims.forEach(function (x) { days[dayKey(x.d)] = 1; });
+    (get('bw-place-v1', []) || []).forEach(function (x) { if (x && x.d) days[dayKey(x.d)] = 1; });
+    var n = 0, t = new Date(), today = !!days[dayKey(t)]; if (!today) t.setDate(t.getDate() - 1);
+    while (days[dayKey(t)]) { n++; t.setDate(t.getDate() - 1); }
+    var week = []; for (var i = 6; i >= 0; i--) { var d = new Date(); d.setDate(d.getDate() - i); week.push({ on: !!days[dayKey(d)], l: d.toLocaleDateString('ar-SA', { weekday: 'short' }), today: i === 0 }); }
+    return { n: n, today: today, week: week };
+  }
+  function lv(p) { return p >= .8 ? 'g' : p >= .5 ? 'o' : 'r'; }
+  // ===== الهدف والعد التنازلي والخطة الأسبوعية (تتعدل تلقائيًا حسب الأداء) =====
+  var GOAL = get('bw-goal-v1', {}) || {}, SKV = get('bw-skill-v1', {}) || {};
+  function setGoal(o) { for (var k in o) GOAL[k] = o[k]; try { localStorage.setItem('bw-goal-v1', JSON.stringify(GOAL)); } catch (e) { } draw(); }
+  window.bwSetGoal = setGoal;
+  function todayCount() {
+    var t = dayKey(now), n = 0;
+    K.h.concat(V.h).forEach(function (x) { if (x.d && dayKey(x.d) === t) n += x.n || 0; });
+    ['bw-sim-v1', 'bwv-sim-v1', 'bwm-sim-v1', 'bwmt-hist'].forEach(function (k) { (get(k, []) || []).forEach(function (x) { if (x && x.d && dayKey(x.d) === t) n += x.n || 0; }); });
+    Object.keys(SKV).forEach(function (k) { (SKV[k].h || []).forEach(function (x) { if (dayKey(x[0]) === t) n += x[1] || 0; }); });
+    return n;
+  }
+  function daysLeft() { if (!GOAL.exam) return null; var d = new Date(GOAL.exam + 'T08:00:00'); return Math.ceil((d - now) / DAY); }
+  function skills() { return Object.keys(SKV).map(function (k) { var r = SKV[k]; return { id: +k, n: r.n, s: r.s, t: r.t, c: r.c, p: r.t ? r.c / r.t : 0 }; }).filter(function (x) { return x.t >= 3; }); }
+  function weakList() {
+    var a = K.secs.map(function (x) { return { k: 'sec', sj: 'kamy', id: x.id, p: x.p, t: x.t }; }).concat(V.secs.map(function (x) { return { k: 'sec', sj: 'lafzi', id: x.id, p: x.p, t: x.t }; }))
+      .concat(skills().map(function (x) { return { k: 'skill', id: x.id, n: x.n, p: x.p, t: x.t }; }));
+    return a.filter(function (x) { return x.t >= 3 && x.p < .75; }).sort(function (a, b) { return a.p - b.p; });
+  }
+  function itemName(w) { return w.k === 'skill' ? 'مهارة «' + w.n + '»' : secName(w.sj, w.id) + ' (' + (w.sj === 'kamy' ? 'كمي' : 'لفظي') + ')'; }
+  function reviewSched() {
+    var all = K.errs.concat(V.errs), r = { now: 0, d3: 0, d7: 0 };
+    all.forEach(function (x) { var due = new Date(x.date).getTime() + [1, 3, 7][x.ok || 0] * DAY, dd = (due - now) / DAY; if (dd <= 0) r.now++; else if (dd <= 3) r.d3++; else if (dd <= 7) r.d7++; });
+    return r;
+  }
+  function weekPlan() {
+    var left = daysLeft(), weak = weakList(), rv = reviewSched(), daily = +GOAL.daily || 30, out = [];
+    var simEvery = left !== null && left <= 14 ? 2 : left !== null && left <= 30 ? 3 : 5;
+    var lastSim = sims[sims.length - 1], sinceSim = lastSim ? Math.floor((now - new Date(lastSim.d)) / DAY) : 99;
+    var DN = ['اليوم', 'غدًا'];
+    for (var i = 0; i < 7; i++) {
+      if (left !== null && i >= left) break;
+      var d = new Date(now + i * DAY), lab = DN[i] || d.toLocaleDateString('ar-SA', { weekday: 'long' }), parts = [];
+      var cap = Math.max(10, Math.round(daily * .6)), back = Math.max(0, rv.now - cap * i);
+      var rvN = Math.min(cap, (i === 0 ? rv.now : back) + (i >= 1 && i <= 3 ? Math.ceil(rv.d3 / 3) : i > 3 ? Math.ceil(rv.d7 / 4) : 0));
+      if (rvN) parts.push('راجع <b>' + AR(rvN) + '</b> من أخطائك');
+      var isSim = (sinceSim + i) % simEvery === simEvery - 1 || (i === 0 && sinceSim >= simEvery);
+      if (isSim) parts.push('<b>اختبار محاكي كامل</b> بالمؤقت');
+      var rest = Math.max(10, daily - rvN - (isSim ? daily : 0));
+      if (weak.length) { var w = weak[i % weak.length]; parts.push('<b>' + AR(Math.min(rest, 20) || 15) + '</b> سؤالًا في ' + esc(itemName(w))); }
+      else if (!isSim) parts.push('<b>' + AR(Math.round(daily / 2)) + '</b> كمي + <b>' + AR(Math.round(daily / 2)) + '</b> لفظي من أقسام جديدة');
+      out.push({ lab: lab, txt: parts.join(' + '), today: i === 0 });
+    }
+    return out;
+  }
+  function goalCard() {
+    var left = daysLeft(), tc = todayCount(), daily = +GOAL.daily || 30, pc = Math.min(100, Math.round(tc / daily * 100));
+    var h = '<div class="card" style="margin-bottom:22px"><div class="goal">';
+    h += '<div class="cd">' + (left === null ? '<b>؟</b><span>حدّد موعد اختبارك</span>' : left > 0 ? '<b>' + AR(left) + '</b><span>' + (left === 1 ? 'يوم على اختبارك' : 'يومًا على اختبارك') + '</span>' : left === 0 ? '<b>اليوم</b><span>بالتوفيق 🤍</span>' : '<b>✓</b><span>انتهى الموعد</span>') + '</div>';
+    h += '<div><h3>🎯 هدف اليوم: ' + AR(daily) + ' سؤالًا</h3><div class="gbar"><i style="width:' + Math.max(3, pc) + '%"></i></div><p class="m" style="margin:0">' + (tc >= daily ? 'أنجزت هدف اليوم 🎉 (' + AR(tc) + ' سؤالًا). أي زيادة بركة.' : 'أنجزت ' + AR(tc) + ' · باقي ' + AR(daily - tc) + ' سؤالًا لتحقق هدفك.') + '</p>';
+    h += '<div class="gin"><label>موعد اختباري: <input type="date" id="gExam" value="' + esc(GOAL.exam || '') + '"></label><label>الهدف اليومي: <select id="gDaily">' + [20, 30, 50, 80].map(function (n) { return '<option value="' + n + '"' + (n === daily ? ' selected' : '') + '>' + AR(n) + ' سؤالًا</option>'; }).join('') + '</select></label></div></div></div></div>';
+    var plan = weekPlan();
+    h += '<div class="two"><div class="card"><h3>🗓 خطتك لهذا الأسبوع</h3><p class="m">تتعدل تلقائيًا كل يوم حسب أخطائك وأضعف أقسامك ومهاراتك' + (left !== null && left <= 14 ? '، ومع اقتراب الاختبار تزيد المحاكاة' : '') + '.</p><ul class="plan">' + plan.map(function (d) { return '<li class="' + (d.today ? 'today' : '') + '"><b>' + esc(d.lab) + '</b><span>' + d.txt + '</span></li>'; }).join('') + '</ul></div>';
+    var rv = reviewSched();
+    h += '<div class="card"><h3>🔁 جدول المراجعة المتباعدة</h3><p class="m">كل سؤال أخطأت فيه يرجع لك بعد يوم، ثم ٣ أيام، ثم أسبوع. لو حليته صح ٣ مرات يخرج من المجلد.</p><div class="rv"><div><b>' + AR(rv.now) + '</b><span>جاهزة اليوم</span></div><div><b>' + AR(rv.d3) + '</b><span>خلال ٣ أيام</span></div><div><b>' + AR(rv.d7) + '</b><span>خلال أسبوع</span></div></div>' + (rv.now ? '<div class="acts">' + (K.due ? '<a class="btn btn-navy" href="' + SUBJ.kamy.page + '#errors">راجع الكمي (' + AR(K.due) + ')</a>' : '') + (V.due ? '<a class="btn btn-navy" href="' + SUBJ.lafzi.page + '#errors">راجع اللفظي (' + AR(V.due) + ')</a>' : '') + '</div>' : '<p class="m" style="margin:0">لا توجد مراجعات مستحقة اليوم 👍</p>') + '</div></div>';
+    return h;
+  }
+  function skillCard() {
+    var L = skills().sort(function (a, b) { return a.p - b.p; }), h = '<div class="card"><h3>🧩 إتقانك حسب المهارة</h3>';
+    if (!L.length) return h + '<p class="m">تدرّب من صفحة «التدريب حسب المهارة» ليظهر هنا مستوى إتقانك لكل مهارة.</p><a class="btn btn-soft" href="/skills.html">التدريب حسب المهارة</a></div>';
+    var row = function (x) { return '<div class="sk lv-' + lv(x.p) + '"><span class="nm">' + esc(x.n) + '</span><span class="bar"><i style="width:' + Math.max(4, Math.round(x.p * 100)) + '%"></i></span><b>' + AR(Math.round(x.p * 100)) + '٪</b></div>'; };
+    h += '<p class="m">' + AR(L.length) + ' مهارة تدرّبت عليها.</p>' + L.slice(0, 6).map(row).join('');
+    return h + '<div class="acts"><a class="btn btn-navy" href="/skills.html?id=' + L[0].id + '">تدرّب على أضعف مهارة</a></div></div>';
+  }
+  var RANK = null, PGN = { 'muhaky mohawsab': 'المحاكي المحوسب', 'aksam kamy': 'محاكي الكمي', 'aksam lafzi': 'محاكي اللفظي', 'muhaky warky1': 'المحاكي الورقي ١', 'muhaky warky2': 'المحاكي الورقي ٢' };
+  function rankCard() {
+    if (!window.__bwSid) return '<div class="card"><h3>📊 مقارنتك بالطلاب</h3><p class="m">تظهر للمشتركين بعد أول اختبار محاكي: ترتيبك بين الطلاب بدون أي أسماء.</p></div>';
+    var h = '<div class="card"><h3>📊 مقارنتك بالطلاب</h3>';
+    if (!RANK) return h + '<p class="m">جارٍ الحساب…</p></div>';
+    if (RANK.off) return h + '<p class="m">المقارنة مخفية، ونتائجك لا تدخل في مقارنة غيرك.</p><button class="lnk" id="rkOn">إظهار المقارنة</button></div>';
+    if (!RANK.list.length) h += '<p class="m">تظهر المقارنة بعد اختبار محاكي واحد على الأقل، وعند وجود ٥ طلاب أو أكثر في نفس الاختبار. بدون أي أسماء.</p>';
+    else h += '<p class="m">مقارنة مجهولة الأسماء بمتوسط آخر ٣ محاولات.</p>' + RANK.list.map(function (r) { return '<div class="rk"><span>' + esc(PGN[r.page] || r.page) + ' <small style="color:#5a6b80">(' + AR(r.mine) + '٪)</small></span><b>أعلى من ' + AR(r.pct) + '٪ من ' + AR(r.n) + ' طالبًا</b></div>'; }).join('');
+    return h + '<p style="margin:10px 0 0"><button class="lnk" id="rkOff">إخفاء المقارنة واستبعادي منها</button></p></div>';
+  }
+  function setRank(off) { try { localStorage.setItem('bw-rank-off', off ? '1' : '0'); } catch (e) { } RANK = off ? { off: true, list: [] } : null; draw(); if (!off) setTimeout(loadRank, 3500); }
+  function loadRank() { if (!window.__bwSid) return; fetch('/api/rank', { credentials: 'same-origin' }).then(function (r) { return r.json(); }).then(function (d) { RANK = d; draw(); }).catch(function () { }); }
+  function subjCard(sj, X) {
+    var T = SUBJ[sj], h = '<div class="card"><h3>' + T.title + '</h3>';
+    if (!X.n) return h + '<p class="m">لم تحل أي اختبار هنا بعد.</p><a class="btn btn-navy" href="' + T.page + '">ابدأ ' + T.title + '</a></div>';
+    h += '<p class="m">' + AR(X.n) + ' سؤالًا محلولًا بدقة ' + AR(Math.round(X.g / X.n * 100)) + '٪ · ' + AR(X.errs.length) + ' سؤالًا في مجلد الأخطاء</p>';
+    h += whyLine(sj, X);
+    var ranked = X.secs.filter(function (x) { return x.t >= 3; }).sort(function (a, b) { return a.p - b.p; });
+    var row = function (x) { return '<div class="sk lv-' + lv(x.p) + '"><span class="nm">' + esc(secName(sj, x.id)) + '</span><span class="bar"><i style="width:' + Math.max(4, Math.round(x.p * 100)) + '%"></i></span><b>' + AR(Math.round(x.p * 100)) + '٪</b></div>'; };
+    if (ranked.length) {
+      h += '<div class="grp">الأضعف</div>' + ranked.slice(0, 3).map(row).join('');
+      if (ranked.length > 3) h += '<div class="grp">الأقوى</div>' + ranked.slice(-3).reverse().map(row).join('');
+    } else h += '<p class="m">حلّ ٣ أسئلة على الأقل في القسم ليظهر مستواك فيه.</p>';
+    var weakIds = ranked.filter(function (x) { return x.p < .8; }).slice(0, 5).map(function (x) { return x.id; });
+    h += '<div class="acts">' + (weakIds.length ? '<button class="btn btn-navy" data-weak="' + sj + '" data-ids="' + weakIds.join(',') + '">تدرّب على أضعف ' + AR(weakIds.length) + ' أقسام</button>' : '') + (X.errs.length ? '<a class="btn btn-soft" href="' + T.page + '#errors">راجع أخطاءك (' + AR(X.errs.length) + ')' + (X.due ? ' · ' + AR(X.due) + ' جاهزة اليوم' : '') + '</a>' : '') + '</div>';
+    return h + '</div>';
+  }
+  function draw() {
+    var n = K.n + V.n, g = K.g + V.g, step = nextStep(), h = '<h1>تقدمي</h1><p class="sub">ملخص تدريبك، والخطوة التالية المقترحة لك.</p>';
+    if (place) h += '<div class="resume"><span>مستواك في اختبار تحديد المستوى: ' + esc(place.lvl) + ' (' + AR(place.p) + '٪ · لفظي ' + AR(place.v) + '٪ · كمي ' + AR(place.k) + '٪)</span><a class="btn btn-soft" href="/placement.html">' + (now - new Date(place.d) > 14 * DAY ? 'حان وقت إعادته' : 'أعد الاختبار') + '</a></div>';
+    h += '<section class="next"><div><small>خطوتك التالية</small><h2>' + esc(step.t) + '</h2><p>' + esc(step.d) + '</p></div>' + (step.go ? '<a class="btn btn-gold" href="' + step.go + '">' + esc(step.b) + '</a>' : '<button class="btn btn-gold" id="stepBtn">' + esc(step.b) + '</button>') + '</section>';
+    var SK2 = streak();
+    h += '<div class="streak"><div><b>' + (SK2.n === 1 ? '🔥 يوم تدريب واحد' : SK2.n === 2 ? '🔥 يوما تدريب متتاليان' : SK2.n ? '🔥 ' + AR(SK2.n) + (SK2.n <= 10 ? ' أيام تدريب متتالية' : ' يومًا تدريبيًا متتاليًا') : 'ابدأ اليوم سلسلة أيام تدريبك') + '</b><span>' + (SK2.n && !SK2.today ? 'تدرّب اليوم ولو ١١ سؤالًا لتستمر السلسلة.' : SK2.today ? 'أحسنت، تدربت اليوم.' : 'قليل كل يوم أفضل من كثير مرة واحدة.') + '</span></div><div class="wk">' + SK2.week.map(function (d) { return '<i class="' + (d.on ? 'on' : '') + (d.today ? ' t' : '') + '" title="' + esc(d.l) + '"><em>' + esc(d.l) + '</em></i>'; }).join('') + '</div></div>';
+    h += goalCard();
+    h += '<div class="kpis"><div class="kpi"><b>' + AR(n) + '</b><span>سؤالًا حللته</span></div><div class="kpi"><b>' + (n ? AR(Math.round(g / n * 100)) + '٪' : '—') + '</b><span>دقة إجاباتك</span></div><div class="kpi"><b>' + AR(K.wk + V.wk) + '</b><span>سؤالًا هذا الأسبوع</span></div><div class="kpi"><b>' + AR(K.errs.length + V.errs.length) + '</b><span>سؤالًا في مجلد الأخطاء</span></div></div>';
+    h += '<div class="two">' + subjCard('kamy', K) + subjCard('lafzi', V) + '</div>';
+    h += '<div class="two">' + skillCard() + rankCard() + '</div>';
+    h += '<div class="two"><div class="card"><h3>نتائج المحاكاة</h3>';
+    var last = sims.slice(-10);
+    if (last.length) {
+      h += '<p class="m">آخر ' + AR(last.length) + ' محاولات' + (last.length > 1 ? ' · ' + (last[last.length - 1].p >= last[last.length - 2].p ? 'تحسّنت أو ثبتت في آخر محاولة' : 'تراجعت قليلًا في آخر محاولة') : '') + '</p><div class="sims">' + last.map(function (x) { return '<div title="' + esc(x.n) + '"><span>' + AR(x.p) + '٪</span><i style="height:' + Math.max(3, x.p) + '%"></i></div>'; }).join('') + '</div>';
+    } else h += '<p class="m">لم تدخل أي اختبار محاكي بعد.</p><a class="btn btn-navy" href="/muhaky%20mohawsab.html">ادخل المحاكي المحوسب</a>';
+    h += '</div><div class="card"><h3>تأسيس اللفظي</h3>';
+    if (tasisDone) { var vals = Object.keys(tasis).map(function (k) { return +tasis[k]; }), avg = Math.round(vals.reduce(function (a, b) { return a + b; }, 0) / vals.length); h += '<p class="m">أنجزت ' + AR(tasisDone) + ' اختبارًا بمتوسط أفضل نتيجة ' + AR(avg) + '٪.</p><a class="btn btn-soft" href="/tasis%20lafzi.html.html">أكمل اختبارات التأسيس</a>'; }
+    else h += '<p class="m">لم تبدأ اختبارات التأسيس بعد.</p><a class="btn btn-soft" href="/tasis%20lafzi.html.html">ابدأ التأسيس</a>';
+    h += '</div></div><p class="note">' + (window.__bwSid ? 'تقدمك محفوظ في حسابك على المنصة، ويظهر لك على أي جهاز تدخل منه بنفس الكود أو بحساب منصة الدورات.' : 'تقدمك في الفترة التجريبية محفوظ على هذا الجهاز فقط. بعد الاشتراك والدخول بالكود يُحفظ في حسابك ويظهر على أي جهاز.') + '</p>';
+    app.innerHTML = h;
+    var sb = document.getElementById('stepBtn'); if (sb) sb.onclick = step.fn;
+    var ge = document.getElementById('gExam'); if (ge) ge.onchange = function () { setGoal({ exam: ge.value }); };
+    var gd = document.getElementById('gDaily'); if (gd) gd.onchange = function () { setGoal({ daily: +gd.value }); };
+    var ro = document.getElementById('rkOff'); if (ro) ro.onclick = function () { setRank(true); };
+    var rn = document.getElementById('rkOn'); if (rn) rn.onclick = function () { setRank(false); };
+    app.querySelectorAll('[data-weak]').forEach(function (b) { b.onclick = function () { practice(b.dataset.weak, b.dataset.ids.split(',').map(Number)); }; });
+  }
+  draw();
+  if ((function () { try { return localStorage.getItem('bw-rank-off') === '1'; } catch (e) { return false; } })()) { RANK = { off: true, list: [] }; draw(); } else loadRank();
+  // أسماء الأقسام من ملفات الأقسام نفسها (تُحمّل في الخلفية)
+  function loadNames(sj) {
+    fetch('/api/exam/secs?c=' + encodeURIComponent(SUBJ[sj].slug)).then(function (r) { return r.json(); }).then(function (d) { if (d.secs) { names[sj] = {}; d.secs.forEach(function (x) { names[sj][x.id] = x.name; }); draw(); } }).catch(function () { });
+  }
+  // زر الاستراحة للمشترك (شريط الاشتراك لا يظهر للمسجّلين إلا قبل الانتهاء بـ٣ أيام)
+  addEventListener('load', function () { var z = document.getElementById('pz'); if (window.bwPause && z) { z.hidden = false; z.querySelector('button').onclick = window.bwPause; } });
+  if (K.secs.length) loadNames('kamy');
+  if (V.secs.length) loadNames('lafzi');
+})();
+</script>
+<script src="/bw-shell.js"></script>
+</body>
+</html>
